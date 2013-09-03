@@ -1,0 +1,48 @@
+apply plugin: 'android-library'
+apply plugin: 'maven'
+
+version = '2.4.6'
+group = 'org.opencv'
+
+android {
+    compileSdkVersion 18
+    buildToolsVersion "18.0.1"
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 18
+        versionCode 2460
+        versionName = version
+    }
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            def mavenRepositoryUrl
+            if (!project.hasProperty('mvnRepoUrl')) {
+                println "Settings for mvnRepoUrl are missing/incomplete for ${project.name}"
+                mavenRepositoryUrl = mavenLocal().getUrl()
+            } else {
+                mavenRepositoryUrl = project.getProperties().get('mvnRepoUrl')
+            }
+
+//            mavenRepositoryUrl = mavenLocal().getUrl()
+
+            repository(url: mavenRepositoryUrl)
+
+            pom.project {
+                name 'OpenCV Android Library'
+                packaging 'aar'
+                description 'The OpenCV Java project for Android.'
+                url 'https://github.com/vRallev/OpenCV'
+
+                scm {
+                    url 'https://github.com/vRallev/OpenCV'
+                    connection 'scm:git@github.com:vRallev/OpenCV.git'
+                    developerConnection 'scm:git@github.com:vRallev/OpenCV.git'
+                }
+            }
+        }
+    }
+}
