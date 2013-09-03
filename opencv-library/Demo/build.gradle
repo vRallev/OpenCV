@@ -1,5 +1,16 @@
 apply plugin: 'android'
 
+repositories {
+    maven {
+        url 'https://raw.github.com/vRallev/mvn-repo/master/'
+    }
+}
+
+dependencies {
+    // compile project(':opencv-android')
+    compile 'org.opencv:opencv-android:2.4.6'
+}
+
 android {
     compileSdkVersion 18
     buildToolsVersion "18.0.1"
@@ -8,8 +19,4 @@ android {
         minSdkVersion 8
         targetSdkVersion 18
     }
-}
-
-dependencies {
-    compile project(':opencv-android')
 }

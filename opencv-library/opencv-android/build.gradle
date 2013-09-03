@@ -27,7 +27,7 @@ uploadArchives {
                 mavenRepositoryUrl = project.getProperties().get('mvnRepoUrl')
             }
 
-//            mavenRepositoryUrl = mavenLocal().getUrl()
+            // mavenRepositoryUrl = mavenLocal().getUrl()
 
             repository(url: mavenRepositoryUrl)
 
