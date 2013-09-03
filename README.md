@@ -27,7 +27,7 @@ Compiling the library
 You can also clone the library and add it your local maven repository.
  
  1. Clone the repository.
- 2. In the root project folder (`OpenCV`) run `gradle uploadArchives`.
+ 2. In the root project folder (`opencv-library`) run `gradle uploadArchives`.
  3. Add the same dependency as above:
 
 ```groovy
