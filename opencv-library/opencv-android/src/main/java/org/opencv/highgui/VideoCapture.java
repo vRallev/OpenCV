@@ -58,6 +58,20 @@ import org.opencv.core.Size;
  * of <code>VideoCapture</code>.
  * </code></p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> A basic sample on using the VideoCapture interface can be found at
+ * opencv_source_code/samples/cpp/starter_video.cpp
+ *   <li> Another basic video processing sample can be found at
+ * opencv_source_code/samples/cpp/video_dmtx.cpp
+ *   <li> (Python) A basic sample on using the VideoCapture interface can be
+ * found at opencv_source_code/samples/python2/video.py
+ *   <li> (Python) Another basic video processing sample can be found at
+ * opencv_source_code/samples/python2/video_dmtx.py
+ *   <li> (Python) A multi threaded video processing sample can be found at
+ * opencv_source_code/samples/python2/video_threaded.py
+ * </ul>
+ *
  * @see <a href="http://docs.opencv.org/modules/highgui/doc/reading_and_writing_images_and_video.html#videocapture">org.opencv.highgui.VideoCapture</a>
  */
 public class VideoCapture {
@@ -174,7 +188,7 @@ public class VideoCapture {
  * a Kinect device), the correct way of retrieving data from it is to call
  * "VideoCapture.grab" first and then call "VideoCapture.retrieve" one or more
  * times with different values of the <code>channel</code> parameter. See
- * http://code.opencv.org/projects/opencv/repository/revisions/master/entry/samples/cpp/kinect_maps.cpp</p>
+ * https://github.com/Itseez/opencv/tree/master/samples/cpp/openni_capture.cpp</p>
  *
  * @see <a href="http://docs.opencv.org/modules/highgui/doc/reading_and_writing_images_and_video.html#videocapture-grab">org.opencv.highgui.VideoCapture.grab</a>
  */
@@ -369,7 +383,7 @@ public class VideoCapture {
     private static native long n_VideoCapture();
 
     // C++: VideoCapture::VideoCapture(string filename)
-    private static native long n_VideoCapture(java.lang.String filename);
+    private static native long n_VideoCapture(String filename);
 
     // C++: VideoCapture::VideoCapture(int device)
     private static native long n_VideoCapture(int device);
@@ -384,7 +398,7 @@ public class VideoCapture {
     private static native boolean n_isOpened(long nativeObj);
 
     // C++: bool VideoCapture::open(string filename)
-    private static native boolean n_open(long nativeObj, java.lang.String filename);
+    private static native boolean n_open(long nativeObj, String filename);
 
     // C++: bool VideoCapture::open(int device)
     private static native boolean n_open(long nativeObj, int device);

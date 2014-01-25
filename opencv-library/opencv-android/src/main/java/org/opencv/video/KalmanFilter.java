@@ -15,6 +15,12 @@ import org.opencv.core.Mat;
  * <code>controlMatrix</code>, and <code>measurementMatrix</code> to get an
  * extended Kalman filter functionality. See the OpenCV sample <code>kalman.cpp</code>.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the standard Kalman filter can be found at
+ * opencv_source_code/samples/cpp/kalman.cpp
+ * </ul>
+ *
  * @see <a href="http://docs.opencv.org/modules/video/doc/motion_analysis_and_object_tracking.html#kalmanfilter">org.opencv.video.KalmanFilter</a>
  */
 public class KalmanFilter {

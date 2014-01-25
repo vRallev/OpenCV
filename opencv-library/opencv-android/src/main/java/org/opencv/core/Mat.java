@@ -406,6 +406,12 @@ package org.opencv.core;
  * any STL algorithm, including <code>std.sort()</code>.
  * </code></p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example demonstrating the serial out capabilities of cv.Mat can be
+ * found at opencv_source_code/samples/cpp/cout_mat.cpp
+ * </ul>
+ *
  * @see <a href="http://docs.opencv.org/modules/core/doc/basic_structures.html#mat">org.opencv.core.Mat</a>
  */
 public class Mat {
@@ -415,7 +421,7 @@ public class Mat {
     public Mat(long addr)
     {
         if (addr == 0)
-            throw new java.lang.UnsupportedOperationException("Native object address is NULL");
+            throw new UnsupportedOperationException("Native object address is NULL");
         nativeObj = addr;
     }
 
@@ -461,7 +467,7 @@ public class Mat {
  * @param cols Number of columns in a 2D array.
  * @param type Array type. Use <code>CV_8UC1,..., CV_64FC4</code> to create 1-4
  * channel matrices, or <code>CV_8UC(n),..., CV_64FC(n)</code> to create
- * multi-channel (up to <code>CV_MAX_CN</code> channels) matrices.
+ * multi-channel (up to <code>CV_CN_MAX</code> channels) matrices.
  *
  * @see <a href="http://docs.opencv.org/modules/core/doc/basic_structures.html#mat-mat">org.opencv.core.Mat.Mat</a>
  */
@@ -492,7 +498,7 @@ public class Mat {
  * go in the reverse order.
  * @param type Array type. Use <code>CV_8UC1,..., CV_64FC4</code> to create 1-4
  * channel matrices, or <code>CV_8UC(n),..., CV_64FC(n)</code> to create
- * multi-channel (up to <code>CV_MAX_CN</code> channels) matrices.
+ * multi-channel (up to <code>CV_CN_MAX</code> channels) matrices.
  *
  * @see <a href="http://docs.opencv.org/modules/core/doc/basic_structures.html#mat-mat">org.opencv.core.Mat.Mat</a>
  */
@@ -522,7 +528,7 @@ public class Mat {
  * @param cols Number of columns in a 2D array.
  * @param type Array type. Use <code>CV_8UC1,..., CV_64FC4</code> to create 1-4
  * channel matrices, or <code>CV_8UC(n),..., CV_64FC(n)</code> to create
- * multi-channel (up to <code>CV_MAX_CN</code> channels) matrices.
+ * multi-channel (up to <code>CV_CN_MAX</code> channels) matrices.
  * @param s An optional value to initialize each matrix element with. To set all
  * the matrix elements to the particular value after the construction, use the
  * assignment operator <code>Mat.operator=(const Scalar& value)</code>.
@@ -556,7 +562,7 @@ public class Mat {
  * go in the reverse order.
  * @param type Array type. Use <code>CV_8UC1,..., CV_64FC4</code> to create 1-4
  * channel matrices, or <code>CV_8UC(n),..., CV_64FC(n)</code> to create
- * multi-channel (up to <code>CV_MAX_CN</code> channels) matrices.
+ * multi-channel (up to <code>CV_CN_MAX</code> channels) matrices.
  * @param s An optional value to initialize each matrix element with. To set all
  * the matrix elements to the particular value after the construction, use the
  * assignment operator <code>Mat.operator=(const Scalar& value)</code>.
@@ -859,7 +865,7 @@ public class Mat {
     //
 
 /**
- * <p>Creates a matrix header for the specified row span.</p>
+ * <p>Creates a matrix header for the specified column span.</p>
  *
  * <p>The method makes a new header for the specified column span of the matrix.
  * Similarly to "Mat.row" and "Mat.col", this is an O(1) operation.</p>
@@ -882,7 +888,7 @@ public class Mat {
     //
 
 /**
- * <p>Creates a matrix header for the specified row span.</p>
+ * <p>Creates a matrix header for the specified column span.</p>
  *
  * <p>The method makes a new header for the specified column span of the matrix.
  * Similarly to "Mat.row" and "Mat.col", this is an O(1) operation.</p>
@@ -895,6 +901,18 @@ public class Mat {
     {
 
         Mat retVal = new Mat(n_colRange(nativeObj, r.start, r.end));
+
+        return retVal;
+    }
+
+    //
+    // C++: int Mat::dims()
+    //
+
+    public int dims()
+    {
+
+        int retVal = n_dims(nativeObj);
 
         return retVal;
     }
@@ -2475,7 +2493,7 @@ public class Mat {
     public int put(int row, int col, double... data) {
         int t = type();
         if (data == null || data.length % CvType.channels(t) != 0)
-            throw new java.lang.UnsupportedOperationException(
+            throw new UnsupportedOperationException(
                     "Provided data element number (" +
                             (data == null ? 0 : data.length) +
                             ") should be multiple of the Mat channels count (" +
@@ -2486,7 +2504,7 @@ public class Mat {
     public int put(int row, int col, float[] data) {
         int t = type();
         if (data == null || data.length % CvType.channels(t) != 0)
-            throw new java.lang.UnsupportedOperationException(
+            throw new UnsupportedOperationException(
                     "Provided data element number (" +
                             (data == null ? 0 : data.length) +
                             ") should be multiple of the Mat channels count (" +
@@ -2494,13 +2512,13 @@ public class Mat {
         if (CvType.depth(t) == CvType.CV_32F) {
             return nPutF(nativeObj, row, col, data.length, data);
         }
-        throw new java.lang.UnsupportedOperationException("Mat data type is not compatible: " + t);
+        throw new UnsupportedOperationException("Mat data type is not compatible: " + t);
     }
 
     public int put(int row, int col, int[] data) {
         int t = type();
         if (data == null || data.length % CvType.channels(t) != 0)
-            throw new java.lang.UnsupportedOperationException(
+            throw new UnsupportedOperationException(
                     "Provided data element number (" +
                             (data == null ? 0 : data.length) +
                             ") should be multiple of the Mat channels count (" +
@@ -2508,13 +2526,13 @@ public class Mat {
         if (CvType.depth(t) == CvType.CV_32S) {
             return nPutI(nativeObj, row, col, data.length, data);
         }
-        throw new java.lang.UnsupportedOperationException("Mat data type is not compatible: " + t);
+        throw new UnsupportedOperationException("Mat data type is not compatible: " + t);
     }
 
     public int put(int row, int col, short[] data) {
         int t = type();
         if (data == null || data.length % CvType.channels(t) != 0)
-            throw new java.lang.UnsupportedOperationException(
+            throw new UnsupportedOperationException(
                     "Provided data element number (" +
                             (data == null ? 0 : data.length) +
                             ") should be multiple of the Mat channels count (" +
@@ -2522,13 +2540,13 @@ public class Mat {
         if (CvType.depth(t) == CvType.CV_16U || CvType.depth(t) == CvType.CV_16S) {
             return nPutS(nativeObj, row, col, data.length, data);
         }
-        throw new java.lang.UnsupportedOperationException("Mat data type is not compatible: " + t);
+        throw new UnsupportedOperationException("Mat data type is not compatible: " + t);
     }
 
     public int put(int row, int col, byte[] data) {
         int t = type();
         if (data == null || data.length % CvType.channels(t) != 0)
-            throw new java.lang.UnsupportedOperationException(
+            throw new UnsupportedOperationException(
                     "Provided data element number (" +
                             (data == null ? 0 : data.length) +
                             ") should be multiple of the Mat channels count (" +
@@ -2536,13 +2554,13 @@ public class Mat {
         if (CvType.depth(t) == CvType.CV_8U || CvType.depth(t) == CvType.CV_8S) {
             return nPutB(nativeObj, row, col, data.length, data);
         }
-        throw new java.lang.UnsupportedOperationException("Mat data type is not compatible: " + t);
+        throw new UnsupportedOperationException("Mat data type is not compatible: " + t);
     }
 
     public int get(int row, int col, byte[] data) {
         int t = type();
         if (data == null || data.length % CvType.channels(t) != 0)
-            throw new java.lang.UnsupportedOperationException(
+            throw new UnsupportedOperationException(
                     "Provided data element number (" +
                             (data == null ? 0 : data.length) +
                             ") should be multiple of the Mat channels count (" +
@@ -2550,13 +2568,13 @@ public class Mat {
         if (CvType.depth(t) == CvType.CV_8U || CvType.depth(t) == CvType.CV_8S) {
             return nGetB(nativeObj, row, col, data.length, data);
         }
-        throw new java.lang.UnsupportedOperationException("Mat data type is not compatible: " + t);
+        throw new UnsupportedOperationException("Mat data type is not compatible: " + t);
     }
 
     public int get(int row, int col, short[] data) {
         int t = type();
         if (data == null || data.length % CvType.channels(t) != 0)
-            throw new java.lang.UnsupportedOperationException(
+            throw new UnsupportedOperationException(
                     "Provided data element number (" +
                             (data == null ? 0 : data.length) +
                             ") should be multiple of the Mat channels count (" +
@@ -2564,13 +2582,13 @@ public class Mat {
         if (CvType.depth(t) == CvType.CV_16U || CvType.depth(t) == CvType.CV_16S) {
             return nGetS(nativeObj, row, col, data.length, data);
         }
-        throw new java.lang.UnsupportedOperationException("Mat data type is not compatible: " + t);
+        throw new UnsupportedOperationException("Mat data type is not compatible: " + t);
     }
 
     public int get(int row, int col, int[] data) {
         int t = type();
         if (data == null || data.length % CvType.channels(t) != 0)
-            throw new java.lang.UnsupportedOperationException(
+            throw new UnsupportedOperationException(
                     "Provided data element number (" +
                             (data == null ? 0 : data.length) +
                             ") should be multiple of the Mat channels count (" +
@@ -2578,13 +2596,13 @@ public class Mat {
         if (CvType.depth(t) == CvType.CV_32S) {
             return nGetI(nativeObj, row, col, data.length, data);
         }
-        throw new java.lang.UnsupportedOperationException("Mat data type is not compatible: " + t);
+        throw new UnsupportedOperationException("Mat data type is not compatible: " + t);
     }
 
     public int get(int row, int col, float[] data) {
         int t = type();
         if (data == null || data.length % CvType.channels(t) != 0)
-            throw new java.lang.UnsupportedOperationException(
+            throw new UnsupportedOperationException(
                     "Provided data element number (" +
                             (data == null ? 0 : data.length) +
                             ") should be multiple of the Mat channels count (" +
@@ -2592,13 +2610,13 @@ public class Mat {
         if (CvType.depth(t) == CvType.CV_32F) {
             return nGetF(nativeObj, row, col, data.length, data);
         }
-        throw new java.lang.UnsupportedOperationException("Mat data type is not compatible: " + t);
+        throw new UnsupportedOperationException("Mat data type is not compatible: " + t);
     }
 
     public int get(int row, int col, double[] data) {
         int t = type();
         if (data == null || data.length % CvType.channels(t) != 0)
-            throw new java.lang.UnsupportedOperationException(
+            throw new UnsupportedOperationException(
                     "Provided data element number (" +
                             (data == null ? 0 : data.length) +
                             ") should be multiple of the Mat channels count (" +
@@ -2606,7 +2624,7 @@ public class Mat {
         if (CvType.depth(t) == CvType.CV_64F) {
             return nGetD(nativeObj, row, col, data.length, data);
         }
-        throw new java.lang.UnsupportedOperationException("Mat data type is not compatible: " + t);
+        throw new UnsupportedOperationException("Mat data type is not compatible: " + t);
     }
 
     public double[] get(int row, int col) {
@@ -2672,6 +2690,9 @@ public class Mat {
 
     // C++: Mat Mat::colRange(int startcol, int endcol)
     private static native long n_colRange(long nativeObj, int startcol, int endcol);
+
+    // C++: int Mat::dims()
+    private static native int n_dims(long nativeObj);
 
     // C++: int Mat::cols()
     private static native int n_cols(long nativeObj);

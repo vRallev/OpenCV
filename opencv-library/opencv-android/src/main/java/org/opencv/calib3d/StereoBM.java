@@ -57,7 +57,10 @@ import org.opencv.core.Mat;
  * <p>The class is a C++ wrapper for the associated functions. In particular,
  * :ocv:funcx:"StereoBM.operator()" is the wrapper for </code></p>
  *
- * <p>"cvFindStereoCorrespondenceBM".</p>
+ * <p>"cvFindStereoCorrespondenceBM"... Sample code:</p>
+ *
+ * <p>(Ocl) An example for using the stereoBM matching algorithm can be found at
+ * opencv_source_code/samples/ocl/stereo_match.cpp</p>
  *
  * @see <a href="http://docs.opencv.org/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html#stereobm">org.opencv.calib3d.StereoBM</a>
  */

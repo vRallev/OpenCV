@@ -1,19 +1,79 @@
 package org.opencv.core;
 
 /**
- * <p>Template class for 2D points specified by its coordinates <em>x</em> and
- * <em>y</em>.
+ * <p>template<typename _Tp> class CV_EXPORTS Point_ <code></p>
+ *
+ * <p>// C++ code:</p>
+ *
+ *
+ * <p>public:</p>
+ *
+ * <p>typedef _Tp value_type;</p>
+ *
+ * <p>// various constructors</p>
+ *
+ * <p>Point_();</p>
+ *
+ * <p>Point_(_Tp _x, _Tp _y);</p>
+ *
+ * <p>Point_(const Point_& pt);</p>
+ *
+ * <p>Point_(const CvPoint& pt);</p>
+ *
+ * <p>Point_(const CvPoint2D32f& pt);</p>
+ *
+ * <p>Point_(const Size_<_Tp>& sz);</p>
+ *
+ * <p>Point_(const Vec<_Tp, 2>& v);</p>
+ *
+ * <p>Point_& operator = (const Point_& pt);</p>
+ *
+ * <p>//! conversion to another data type</p>
+ *
+ * <p>template<typename _Tp2> operator Point_<_Tp2>() const;</p>
+ *
+ * <p>//! conversion to the old-style C structures</p>
+ *
+ * <p>operator CvPoint() const;</p>
+ *
+ * <p>operator CvPoint2D32f() const;</p>
+ *
+ * <p>operator Vec<_Tp, 2>() const;</p>
+ *
+ * <p>//! dot product</p>
+ *
+ * <p>_Tp dot(const Point_& pt) const;</p>
+ *
+ * <p>//! dot product computed in double-precision arithmetics</p>
+ *
+ * <p>double ddot(const Point_& pt) const;</p>
+ *
+ * <p>//! cross-product</p>
+ *
+ * <p>double cross(const Point_& pt) const;</p>
+ *
+ * <p>//! checks whether the point is inside the specified rectangle</p>
+ *
+ * <p>bool inside(const Rect_<_Tp>& r) const;</p>
+ *
+ * <p>_Tp x, y; //< the point coordinates</p>
+ *
+ * <p>};</p>
+ *
+ * <p>Template class for 2D points specified by its coordinates </code></p>
+ *
+ * <p><em>x</em> and <em>y</em>.
  * An instance of the class is interchangeable with C structures,
  * <code>CvPoint</code> and <code>CvPoint2D32f</code>. There is also a cast
  * operator to convert point coordinates to the specified type. The conversion
  * from floating-point coordinates to integer coordinates is done by rounding.
- * Commonly, the conversion uses this operation for each of the coordinates.
+ * Commonly, the conversion uses thisoperation for each of the coordinates.
  * Besides the class members listed in the declaration above, the following
- * operations on points are implemented:</p>
- *
- * <p>pt1 = pt2 + pt3; <code></p>
+ * operations on points are implemented: <code></p>
  *
  * <p>// C++ code:</p>
+ *
+ * <p>pt1 = pt2 + pt3;</p>
  *
  * <p>pt1 = pt2 - pt3;</p>
  *

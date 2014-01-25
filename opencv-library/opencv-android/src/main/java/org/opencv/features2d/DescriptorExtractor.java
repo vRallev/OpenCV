@@ -154,9 +154,10 @@ public class DescriptorExtractor {
  * <ul>
  *   <li> <code>"SIFT"</code> -- "SIFT"
  *   <li> <code>"SURF"</code> -- "SURF"
- *   <li> <code>"ORB"</code> -- "ORB"
- *   <li> <code>"BRISK"</code> -- "BRISK"
  *   <li> <code>"BRIEF"</code> -- "BriefDescriptorExtractor"
+ *   <li> <code>"BRISK"</code> -- "BRISK"
+ *   <li> <code>"ORB"</code> -- "ORB"
+ *   <li> <code>"FREAK"</code> -- "FREAK"
  * </ul>
  *
  * <p>A combined format is also supported: descriptor extractor adapter name

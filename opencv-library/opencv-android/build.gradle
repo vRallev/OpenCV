@@ -1,48 +1,75 @@
 apply plugin: 'android-library'
 apply plugin: 'maven'
 
-version = '2.4.6'
+version = '2.4.8'
 group = 'org.opencv'
 
 android {
-    compileSdkVersion 18
-    buildToolsVersion "18.0.1"
+    compileSdkVersion 19
+    buildToolsVersion "19.0.1"
 
     defaultConfig {
         minSdkVersion 8
-        targetSdkVersion 18
-        versionCode 2460
+        targetSdkVersion 19
+        versionCode 2480
         versionName = version
     }
 }
 
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            def mavenRepositoryUrl
-            if (!project.hasProperty('mvnRepoUrl')) {
-                println "Settings for mvnRepoUrl are missing/incomplete for ${project.name}"
-                mavenRepositoryUrl = mavenLocal().getUrl()
-            } else {
-                mavenRepositoryUrl = project.getProperties().get('mvnRepoUrl')
-            }
+afterEvaluate { project ->
+    uploadArchives {
+        repositories {
+            mavenDeployer {
+                def mavenRepositoryUrl
+                if (!project.hasProperty('mvnRepoUrl')) {
+                    println "Settings for mvnRepoUrl are missing/incomplete for ${project.name}"
+                    mavenRepositoryUrl = mavenLocal().getUrl()
+                } else {
+                    mavenRepositoryUrl = project.getProperties().get('mvnRepoUrl')
+                }
 
-            // mavenRepositoryUrl = mavenLocal().getUrl()
+                // mavenRepositoryUrl = mavenLocal().getUrl()
 
-            repository(url: mavenRepositoryUrl)
+                repository(url: mavenRepositoryUrl)
 
-            pom.project {
-                name 'OpenCV Android Library'
-                packaging 'aar'
-                description 'The OpenCV Java project for Android.'
-                url 'https://github.com/vRallev/OpenCV'
-
-                scm {
+                pom.project {
+                    name 'OpenCV Android Library'
+                    packaging 'aar'
+                    description 'The OpenCV Java project for Android.'
                     url 'https://github.com/vRallev/OpenCV'
-                    connection 'scm:git@github.com:vRallev/OpenCV.git'
-                    developerConnection 'scm:git@github.com:vRallev/OpenCV.git'
+
+                    scm {
+                        url 'https://github.com/vRallev/OpenCV'
+                        connection 'scm:git@github.com:vRallev/OpenCV.git'
+                        developerConnection 'scm:git@github.com:vRallev/OpenCV.git'
+                    }
                 }
             }
         }
+    }
+
+    //noinspection GroovyAssignabilityCheck
+    task androidJavadocs(type: Javadoc) {
+        source = android.sourceSets.main.allJava
+    }
+
+    //noinspection GroovyAssignabilityCheck
+    task androidJavadocsJar(type: Jar) {
+        classifier = 'javadoc'
+        //basename = artifact_id
+        from androidJavadocs.destinationDir
+    }
+
+    //noinspection GroovyAssignabilityCheck
+    task androidSourcesJar(type: Jar) {
+        classifier = 'sources'
+        //basename = artifact_id
+        from android.sourceSets.main.allSource
+    }
+
+    artifacts {
+        //archives packageReleaseJar
+        archives androidSourcesJar
+        archives androidJavadocsJar
     }
 }

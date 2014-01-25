@@ -3,12 +3,26 @@ package org.opencv.core;
 /**
  * <p>Template class specifying a continuous subsequence (slice) of a sequence.</p>
  *
- * <p>class Range <code></p>
+ * <p>class CV_EXPORTS Range <code></p>
  *
  * <p>// C++ code:</p>
  *
  *
- * <p>public:...</p>
+ * <p>public:</p>
+ *
+ * <p>Range();</p>
+ *
+ * <p>Range(int _start, int _end);</p>
+ *
+ * <p>Range(const CvSlice& slice);</p>
+ *
+ * <p>int size() const;</p>
+ *
+ * <p>bool empty() const;</p>
+ *
+ * <p>static Range all();</p>
+ *
+ * <p>operator CvSlice() const;</p>
  *
  * <p>int start, end;</p>
  *

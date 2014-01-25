@@ -11,6 +11,16 @@ import org.opencv.core.Mat;
  * <p>The class implements K-Nearest Neighbors model as described in the beginning
  * of this section.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> (Python) An example of digit recognition using KNearest can be found
+ * at opencv_source/samples/python2/digits.py
+ *   <li> (Python) An example of grid search digit recognition using KNearest
+ * can be found at opencv_source/samples/python2/digits_adjust.py
+ *   <li> (Python) An example of video digit recognition using KNearest can be
+ * found at opencv_source/samples/python2/digits_video.py
+ * </ul>
+ *
  * @see <a href="http://docs.opencv.org/modules/ml/doc/k_nearest_neighbors.html#cvknearest">org.opencv.ml.CvKNearest : public CvStatModel</a>
  */
 public class CvKNearest extends CvStatModel {

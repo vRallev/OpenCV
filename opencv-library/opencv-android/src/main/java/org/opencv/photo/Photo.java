@@ -300,6 +300,14 @@ public class Photo {
  * scanned photo, or to remove undesirable objects from still images or video.
  * See http://en.wikipedia.org/wiki/Inpainting for more details.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the inpainting technique can be found at
+ * opencv_source_code/samples/cpp/inpaint.cpp
+ *   <li> (Python) An example using the inpainting technique can be found at
+ * opencv_source_code/samples/python2/inpaint.py
+ * </ul>
+ *
  * @param src Input 8-bit 1-channel or 3-channel image.
  * @param inpaintMask Inpainting mask, 8-bit 1-channel image. Non-zero pixels
  * indicate the area that needs to be inpainted.

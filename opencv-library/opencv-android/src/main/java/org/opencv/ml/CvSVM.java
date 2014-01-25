@@ -10,6 +10,16 @@ import org.opencv.core.Mat;
 /**
  * <p>Support Vector Machines.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> (Python) An example of digit recognition using SVM can be found at
+ * opencv_source/samples/python2/digits.py
+ *   <li> (Python) An example of grid search digit recognition using SVM can be
+ * found at opencv_source/samples/python2/digits_adjust.py
+ *   <li> (Python) An example of video digit recognition using SVM can be found
+ * at opencv_source/samples/python2/digits_video.py
+ * </ul>
+ *
  * @see <a href="http://docs.opencv.org/modules/ml/doc/support_vector_machines.html#cvsvm">org.opencv.ml.CvSVM : public CvStatModel</a>
  */
 public class CvSVM extends CvStatModel {

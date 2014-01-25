@@ -72,6 +72,12 @@ import org.opencv.core.Mat;
  * quadratic interpolation and speckle filtering).
  * </ul>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> (Python) An example illustrating the use of the StereoSGBM matching
+ * algorithm can be found at opencv_source_code/samples/python2/stereo_match.py
+ * </ul>
+ *
  * @see <a href="http://docs.opencv.org/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html#stereosgbm">org.opencv.calib3d.StereoSGBM</a>
  */
 public class StereoSGBM {

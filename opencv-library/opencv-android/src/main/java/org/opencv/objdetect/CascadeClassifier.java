@@ -71,6 +71,12 @@ public class CascadeClassifier {
  *
  * <p>The function is parallelized with the TBB library.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> (Python) A face detection example using cascade classifiers can be
+ * found at opencv_source_code/samples/python2/facedetect.py
+ * </ul>
+ *
  * @param image Matrix of the type <code>CV_8U</code> containing an image where
  * objects are detected.
  * @param objects Vector of rectangles where each rectangle contains the
@@ -102,6 +108,12 @@ public class CascadeClassifier {
  *
  * <p>The function is parallelized with the TBB library.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> (Python) A face detection example using cascade classifiers can be
+ * found at opencv_source_code/samples/python2/facedetect.py
+ * </ul>
+ *
  * @param image Matrix of the type <code>CV_8U</code> containing an image where
  * objects are detected.
  * @param objects Vector of rectangles where each rectangle contains the
@@ -127,6 +139,12 @@ public class CascadeClassifier {
  * are returned as a list of rectangles.</p>
  *
  * <p>The function is parallelized with the TBB library.</p>
+ *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> (Python) A face detection example using cascade classifiers can be
+ * found at opencv_source_code/samples/python2/facedetect.py
+ * </ul>
  *
  * @param image Matrix of the type <code>CV_8U</code> containing an image where
  * objects are detected.
@@ -163,6 +181,12 @@ public class CascadeClassifier {
  * are returned as a list of rectangles.</p>
  *
  * <p>The function is parallelized with the TBB library.</p>
+ *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> (Python) A face detection example using cascade classifiers can be
+ * found at opencv_source_code/samples/python2/facedetect.py
+ * </ul>
  *
  * @param image Matrix of the type <code>CV_8U</code> containing an image where
  * objects are detected.

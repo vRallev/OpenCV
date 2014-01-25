@@ -349,10 +349,10 @@ public class Calib3d {
  * algorithm.
  *
  * @see <a href="http://docs.opencv.org/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html#calibratecamera">org.opencv.calib3d.Calib3d.calibrateCamera</a>
- * @see org.opencv.calib3d.Calib3d#initCameraMatrix2D
- * @see org.opencv.calib3d.Calib3d#stereoCalibrate
- * @see org.opencv.calib3d.Calib3d#findChessboardCorners
- * @see org.opencv.calib3d.Calib3d#solvePnP
+ * @see Calib3d#initCameraMatrix2D
+ * @see Calib3d#stereoCalibrate
+ * @see Calib3d#findChessboardCorners
+ * @see Calib3d#solvePnP
  * @see org.opencv.imgproc.Imgproc#undistort
  */
     public static double calibrateCamera(List<Mat> objectPoints, List<Mat> imagePoints, Size imageSize, Mat cameraMatrix, Mat distCoeffs, List<Mat> rvecs, List<Mat> tvecs, int flags, TermCriteria criteria)
@@ -483,10 +483,10 @@ public class Calib3d {
  * </ul>
  *
  * @see <a href="http://docs.opencv.org/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html#calibratecamera">org.opencv.calib3d.Calib3d.calibrateCamera</a>
- * @see org.opencv.calib3d.Calib3d#initCameraMatrix2D
- * @see org.opencv.calib3d.Calib3d#stereoCalibrate
- * @see org.opencv.calib3d.Calib3d#findChessboardCorners
- * @see org.opencv.calib3d.Calib3d#solvePnP
+ * @see Calib3d#initCameraMatrix2D
+ * @see Calib3d#stereoCalibrate
+ * @see Calib3d#findChessboardCorners
+ * @see Calib3d#solvePnP
  * @see org.opencv.imgproc.Imgproc#undistort
  */
     public static double calibrateCamera(List<Mat> objectPoints, List<Mat> imagePoints, Size imageSize, Mat cameraMatrix, Mat distCoeffs, List<Mat> rvecs, List<Mat> tvecs, int flags)
@@ -587,10 +587,10 @@ public class Calib3d {
  * view.
  *
  * @see <a href="http://docs.opencv.org/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html#calibratecamera">org.opencv.calib3d.Calib3d.calibrateCamera</a>
- * @see org.opencv.calib3d.Calib3d#initCameraMatrix2D
- * @see org.opencv.calib3d.Calib3d#stereoCalibrate
- * @see org.opencv.calib3d.Calib3d#findChessboardCorners
- * @see org.opencv.calib3d.Calib3d#solvePnP
+ * @see Calib3d#initCameraMatrix2D
+ * @see Calib3d#stereoCalibrate
+ * @see Calib3d#findChessboardCorners
+ * @see Calib3d#solvePnP
  * @see org.opencv.imgproc.Imgproc#undistort
  */
     public static double calibrateCamera(List<Mat> objectPoints, List<Mat> imagePoints, Size imageSize, Mat cameraMatrix, Mat distCoeffs, List<Mat> rvecs, List<Mat> tvecs)
@@ -1533,6 +1533,12 @@ public class Calib3d {
  * Homography matrix is determined up to a scale. Thus, it is normalized so that
  * <em>h_33=1</em>.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> A example on calculating a homography for image matching can be found
+ * at opencv_source_code/samples/cpp/video_homography.cpp
+ * </ul>
+ *
  * @param srcPoints Coordinates of the points in the original plane, a matrix of
  * the type <code>CV_32FC2</code> or <code>vector<Point2f></code>.
  * @param dstPoints Coordinates of the points in the target plane, a matrix of
@@ -1617,6 +1623,12 @@ public class Calib3d {
  * Homography matrix is determined up to a scale. Thus, it is normalized so that
  * <em>h_33=1</em>.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> A example on calculating a homography for image matching can be found
+ * at opencv_source_code/samples/cpp/video_homography.cpp
+ * </ul>
+ *
  * @param srcPoints Coordinates of the points in the original plane, a matrix of
  * the type <code>CV_32FC2</code> or <code>vector<Point2f></code>.
  * @param dstPoints Coordinates of the points in the target plane, a matrix of
@@ -1698,6 +1710,12 @@ public class Calib3d {
  * <p>The function is used to find initial intrinsic and extrinsic matrices.
  * Homography matrix is determined up to a scale. Thus, it is normalized so that
  * <em>h_33=1</em>.</p>
+ *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> A example on calculating a homography for image matching can be found
+ * at opencv_source_code/samples/cpp/video_homography.cpp
+ * </ul>
  *
  * @param srcPoints Coordinates of the points in the original plane, a matrix of
  * the type <code>CV_32FC2</code> or <code>vector<Point2f></code>.
@@ -2163,6 +2181,12 @@ public class Calib3d {
  * corresponding image projections, as well as the camera matrix and the
  * distortion coefficients.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example of how to use solvePNP for planar augmented reality can be
+ * found at opencv_source_code/samples/python2/plane_ar.py
+ * </ul>
+ *
  * @param objectPoints Array of object points in the object coordinate space,
  * 3xN/Nx3 1-channel or 1xN/Nx1 3-channel, where N is the number of points.
  * <code>vector<Point3f></code> can be also passed here.
@@ -2219,6 +2243,12 @@ public class Calib3d {
  * <p>The function estimates the object pose given a set of object points, their
  * corresponding image projections, as well as the camera matrix and the
  * distortion coefficients.</p>
+ *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example of how to use solvePNP for planar augmented reality can be
+ * found at opencv_source_code/samples/python2/plane_ar.py
+ * </ul>
  *
  * @param objectPoints Array of object points in the object coordinate space,
  * 3xN/Nx3 1-channel or 1xN/Nx1 3-channel, where N is the number of points.
@@ -2904,7 +2934,7 @@ public class Calib3d {
  * @param points4D 4xN array of reconstructed points in homogeneous coordinates.
  *
  * @see <a href="http://docs.opencv.org/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html#triangulatepoints">org.opencv.calib3d.Calib3d.triangulatePoints</a>
- * @see org.opencv.calib3d.Calib3d#reprojectImageTo3D
+ * @see Calib3d#reprojectImageTo3D
  */
     public static void triangulatePoints(Mat projMatr1, Mat projMatr2, Mat projPoints1, Mat projPoints2, Mat points4D)
     {

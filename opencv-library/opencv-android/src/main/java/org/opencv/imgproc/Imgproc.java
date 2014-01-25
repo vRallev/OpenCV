@@ -387,6 +387,14 @@ public class Imgproc {
  * edge linking. The largest value is used to find initial segments of strong
  * edges. See http://en.wikipedia.org/wiki/Canny_edge_detector</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example on using the canny edge detector can be found at
+ * opencv_source_code/samples/cpp/edge.cpp
+ *   <li> (Python) An example on using the canny edge detector can be found at
+ * opencv_source_code/samples/python/edge.py
+ * </ul>
+ *
  * @param image single-channel 8-bit input image.
  * @param edges output edge map; it has the same size and type as
  * <code>image</code>.
@@ -417,6 +425,14 @@ public class Imgproc {
  * value between <code>threshold1</code> and <code>threshold2</code> is used for
  * edge linking. The largest value is used to find initial segments of strong
  * edges. See http://en.wikipedia.org/wiki/Canny_edge_detector</p>
+ *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example on using the canny edge detector can be found at
+ * opencv_source_code/samples/cpp/edge.cpp
+ *   <li> (Python) An example on using the canny edge detector can be found at
+ * opencv_source_code/samples/python/edge.py
+ * </ul>
  *
  * @param image single-channel 8-bit input image.
  * @param edges output edge map; it has the same size and type as
@@ -465,12 +481,12 @@ public class Imgproc {
  * details).
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#gaussianblur">org.opencv.imgproc.Imgproc.GaussianBlur</a>
- * @see org.opencv.imgproc.Imgproc#sepFilter2D
- * @see org.opencv.imgproc.Imgproc#medianBlur
- * @see org.opencv.imgproc.Imgproc#boxFilter
- * @see org.opencv.imgproc.Imgproc#blur
- * @see org.opencv.imgproc.Imgproc#filter2D
- * @see org.opencv.imgproc.Imgproc#bilateralFilter
+ * @see Imgproc#sepFilter2D
+ * @see Imgproc#medianBlur
+ * @see Imgproc#boxFilter
+ * @see Imgproc#blur
+ * @see Imgproc#filter2D
+ * @see Imgproc#bilateralFilter
  */
     public static void GaussianBlur(Mat src, Mat dst, Size ksize, double sigmaX, double sigmaY, int borderType)
     {
@@ -504,12 +520,12 @@ public class Imgproc {
  * <code>ksize</code>, <code>sigmaX</code>, and <code>sigmaY</code>.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#gaussianblur">org.opencv.imgproc.Imgproc.GaussianBlur</a>
- * @see org.opencv.imgproc.Imgproc#sepFilter2D
- * @see org.opencv.imgproc.Imgproc#medianBlur
- * @see org.opencv.imgproc.Imgproc#boxFilter
- * @see org.opencv.imgproc.Imgproc#blur
- * @see org.opencv.imgproc.Imgproc#filter2D
- * @see org.opencv.imgproc.Imgproc#bilateralFilter
+ * @see Imgproc#sepFilter2D
+ * @see Imgproc#medianBlur
+ * @see Imgproc#boxFilter
+ * @see Imgproc#blur
+ * @see Imgproc#filter2D
+ * @see Imgproc#bilateralFilter
  */
     public static void GaussianBlur(Mat src, Mat dst, Size ksize, double sigmaX, double sigmaY)
     {
@@ -536,12 +552,12 @@ public class Imgproc {
  * @param sigmaX Gaussian kernel standard deviation in X direction.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#gaussianblur">org.opencv.imgproc.Imgproc.GaussianBlur</a>
- * @see org.opencv.imgproc.Imgproc#sepFilter2D
- * @see org.opencv.imgproc.Imgproc#medianBlur
- * @see org.opencv.imgproc.Imgproc#boxFilter
- * @see org.opencv.imgproc.Imgproc#blur
- * @see org.opencv.imgproc.Imgproc#filter2D
- * @see org.opencv.imgproc.Imgproc#bilateralFilter
+ * @see Imgproc#sepFilter2D
+ * @see Imgproc#medianBlur
+ * @see Imgproc#boxFilter
+ * @see Imgproc#blur
+ * @see Imgproc#filter2D
+ * @see Imgproc#bilateralFilter
  */
     public static void GaussianBlur(Mat src, Mat dst, Size ksize, double sigmaX)
     {
@@ -624,6 +640,12 @@ public class Imgproc {
  * find the correct radius using an additional procedure.
  * </code></p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the Hough circle detector can be found at
+ * opencv_source_code/samples/cpp/houghcircles.cpp
+ * </ul>
+ *
  * @param image 8-bit, single-channel, grayscale input image.
  * @param circles Output vector of found circles. Each vector is encoded as a
  * 3-element floating-point vector <em>(x, y, radius)</em>.
@@ -649,8 +671,8 @@ public class Imgproc {
  * @param maxRadius Maximum circle radius.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/feature_detection.html#houghcircles">org.opencv.imgproc.Imgproc.HoughCircles</a>
- * @see org.opencv.imgproc.Imgproc#minEnclosingCircle
- * @see org.opencv.imgproc.Imgproc#fitEllipse
+ * @see Imgproc#minEnclosingCircle
+ * @see Imgproc#fitEllipse
  */
     public static void HoughCircles(Mat image, Mat circles, int method, double dp, double minDist, double param1, double param2, int minRadius, int maxRadius)
     {
@@ -728,6 +750,12 @@ public class Imgproc {
  * find the correct radius using an additional procedure.
  * </code></p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the Hough circle detector can be found at
+ * opencv_source_code/samples/cpp/houghcircles.cpp
+ * </ul>
+ *
  * @param image 8-bit, single-channel, grayscale input image.
  * @param circles Output vector of found circles. Each vector is encoded as a
  * 3-element floating-point vector <em>(x, y, radius)</em>.
@@ -744,8 +772,8 @@ public class Imgproc {
  * missed.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/feature_detection.html#houghcircles">org.opencv.imgproc.Imgproc.HoughCircles</a>
- * @see org.opencv.imgproc.Imgproc#minEnclosingCircle
- * @see org.opencv.imgproc.Imgproc#fitEllipse
+ * @see Imgproc#minEnclosingCircle
+ * @see Imgproc#fitEllipse
  */
     public static void HoughCircles(Mat image, Mat circles, int method, double dp, double minDist)
     {
@@ -767,6 +795,12 @@ public class Imgproc {
  * algorithm for line detection. See http://homepages.inf.ed.ac.uk/rbf/HIPR2/hough.htm
  * for a good explanation of Hough transform.
  * See also the example in "HoughLinesP" description.</p>
+ *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the Hough line detector can be found at
+ * opencv_source_code/samples/cpp/houghlines.cpp
+ * </ul>
  *
  * @param image 8-bit, single-channel binary source image. The image may be
  * modified by the function.
@@ -805,6 +839,12 @@ public class Imgproc {
  * algorithm for line detection. See http://homepages.inf.ed.ac.uk/rbf/HIPR2/hough.htm
  * for a good explanation of Hough transform.
  * See also the example in "HoughLinesP" description.</p>
+ *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the Hough line detector can be found at
+ * opencv_source_code/samples/cpp/houghlines.cpp
+ * </ul>
  *
  * @param image 8-bit, single-channel binary source image. The image may be
  * modified by the function.
@@ -1112,7 +1152,7 @@ public class Imgproc {
  * @param hu Output Hu invariants.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html#humoments">org.opencv.imgproc.Imgproc.HuMoments</a>
- * @see org.opencv.imgproc.Imgproc#matchShapes
+ * @see Imgproc#matchShapes
  */
     public static void HuMoments(Moments m, Mat hu)
     {
@@ -1141,6 +1181,12 @@ public class Imgproc {
  *
  * <p><em>vecthreethree 0101(-4)1010</em></p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the Laplace transformation for edge detection can be
+ * found at opencv_source_code/samples/cpp/laplace.cpp
+ * </ul>
+ *
  * @param src Source image.
  * @param dst Destination image of the same size and the same number of channels
  * as <code>src</code>.
@@ -1155,8 +1201,8 @@ public class Imgproc {
  * details.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#laplacian">org.opencv.imgproc.Imgproc.Laplacian</a>
- * @see org.opencv.imgproc.Imgproc#Scharr
- * @see org.opencv.imgproc.Imgproc#Sobel
+ * @see Imgproc#Scharr
+ * @see Imgproc#Sobel
  */
     public static void Laplacian(Mat src, Mat dst, int ddepth, int ksize, double scale, double delta, int borderType)
     {
@@ -1180,6 +1226,12 @@ public class Imgproc {
  *
  * <p><em>vecthreethree 0101(-4)1010</em></p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the Laplace transformation for edge detection can be
+ * found at opencv_source_code/samples/cpp/laplace.cpp
+ * </ul>
+ *
  * @param src Source image.
  * @param dst Destination image of the same size and the same number of channels
  * as <code>src</code>.
@@ -1192,8 +1244,8 @@ public class Imgproc {
  * storing them in <code>dst</code>.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#laplacian">org.opencv.imgproc.Imgproc.Laplacian</a>
- * @see org.opencv.imgproc.Imgproc#Scharr
- * @see org.opencv.imgproc.Imgproc#Sobel
+ * @see Imgproc#Scharr
+ * @see Imgproc#Sobel
  */
     public static void Laplacian(Mat src, Mat dst, int ddepth, int ksize, double scale, double delta)
     {
@@ -1217,14 +1269,20 @@ public class Imgproc {
  *
  * <p><em>vecthreethree 0101(-4)1010</em></p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the Laplace transformation for edge detection can be
+ * found at opencv_source_code/samples/cpp/laplace.cpp
+ * </ul>
+ *
  * @param src Source image.
  * @param dst Destination image of the same size and the same number of channels
  * as <code>src</code>.
  * @param ddepth Desired depth of the destination image.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#laplacian">org.opencv.imgproc.Imgproc.Laplacian</a>
- * @see org.opencv.imgproc.Imgproc#Scharr
- * @see org.opencv.imgproc.Imgproc#Sobel
+ * @see Imgproc#Scharr
+ * @see Imgproc#Sobel
  */
     public static void Laplacian(Mat src, Mat dst, int ddepth)
     {
@@ -1441,12 +1499,12 @@ public class Imgproc {
  * details).
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#sobel">org.opencv.imgproc.Imgproc.Sobel</a>
- * @see org.opencv.imgproc.Imgproc#GaussianBlur
+ * @see Imgproc#GaussianBlur
  * @see org.opencv.core.Core#cartToPolar
- * @see org.opencv.imgproc.Imgproc#sepFilter2D
- * @see org.opencv.imgproc.Imgproc#Laplacian
- * @see org.opencv.imgproc.Imgproc#Scharr
- * @see org.opencv.imgproc.Imgproc#filter2D
+ * @see Imgproc#sepFilter2D
+ * @see Imgproc#Laplacian
+ * @see Imgproc#Scharr
+ * @see Imgproc#filter2D
  */
     public static void Sobel(Mat src, Mat dst, int ddepth, int dx, int dy, int ksize, double scale, double delta, int borderType)
     {
@@ -1532,12 +1590,12 @@ public class Imgproc {
  * storing them in <code>dst</code>.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#sobel">org.opencv.imgproc.Imgproc.Sobel</a>
- * @see org.opencv.imgproc.Imgproc#GaussianBlur
+ * @see Imgproc#GaussianBlur
  * @see org.opencv.core.Core#cartToPolar
- * @see org.opencv.imgproc.Imgproc#sepFilter2D
- * @see org.opencv.imgproc.Imgproc#Laplacian
- * @see org.opencv.imgproc.Imgproc#Scharr
- * @see org.opencv.imgproc.Imgproc#filter2D
+ * @see Imgproc#sepFilter2D
+ * @see Imgproc#Laplacian
+ * @see Imgproc#Scharr
+ * @see Imgproc#filter2D
  */
     public static void Sobel(Mat src, Mat dst, int ddepth, int dx, int dy, int ksize, double scale, double delta)
     {
@@ -1618,12 +1676,12 @@ public class Imgproc {
  * @param dy a dy
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#sobel">org.opencv.imgproc.Imgproc.Sobel</a>
- * @see org.opencv.imgproc.Imgproc#GaussianBlur
+ * @see Imgproc#GaussianBlur
  * @see org.opencv.core.Core#cartToPolar
- * @see org.opencv.imgproc.Imgproc#sepFilter2D
- * @see org.opencv.imgproc.Imgproc#Laplacian
- * @see org.opencv.imgproc.Imgproc#Scharr
- * @see org.opencv.imgproc.Imgproc#filter2D
+ * @see Imgproc#sepFilter2D
+ * @see Imgproc#Laplacian
+ * @see Imgproc#Scharr
+ * @see Imgproc#filter2D
  */
     public static void Sobel(Mat src, Mat dst, int ddepth, int dx, int dy)
     {
@@ -1659,9 +1717,9 @@ public class Imgproc {
  * @param mask Optional operation mask.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/motion_analysis_and_object_tracking.html#accumulate">org.opencv.imgproc.Imgproc.accumulate</a>
- * @see org.opencv.imgproc.Imgproc#accumulateWeighted
- * @see org.opencv.imgproc.Imgproc#accumulateProduct
- * @see org.opencv.imgproc.Imgproc#accumulateSquare
+ * @see Imgproc#accumulateWeighted
+ * @see Imgproc#accumulateProduct
+ * @see Imgproc#accumulateSquare
  */
     public static void accumulate(Mat src, Mat dst, Mat mask)
     {
@@ -1691,9 +1749,9 @@ public class Imgproc {
  * 32-bit or 64-bit floating-point.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/motion_analysis_and_object_tracking.html#accumulate">org.opencv.imgproc.Imgproc.accumulate</a>
- * @see org.opencv.imgproc.Imgproc#accumulateWeighted
- * @see org.opencv.imgproc.Imgproc#accumulateProduct
- * @see org.opencv.imgproc.Imgproc#accumulateSquare
+ * @see Imgproc#accumulateWeighted
+ * @see Imgproc#accumulateProduct
+ * @see Imgproc#accumulateSquare
  */
     public static void accumulate(Mat src, Mat dst)
     {
@@ -1728,9 +1786,9 @@ public class Imgproc {
  * @param mask Optional operation mask.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/motion_analysis_and_object_tracking.html#accumulateproduct">org.opencv.imgproc.Imgproc.accumulateProduct</a>
- * @see org.opencv.imgproc.Imgproc#accumulate
- * @see org.opencv.imgproc.Imgproc#accumulateWeighted
- * @see org.opencv.imgproc.Imgproc#accumulateSquare
+ * @see Imgproc#accumulate
+ * @see Imgproc#accumulateWeighted
+ * @see Imgproc#accumulateSquare
  */
     public static void accumulateProduct(Mat src1, Mat src2, Mat dst, Mat mask)
     {
@@ -1759,9 +1817,9 @@ public class Imgproc {
  * 32-bit or 64-bit floating-point.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/motion_analysis_and_object_tracking.html#accumulateproduct">org.opencv.imgproc.Imgproc.accumulateProduct</a>
- * @see org.opencv.imgproc.Imgproc#accumulate
- * @see org.opencv.imgproc.Imgproc#accumulateWeighted
- * @see org.opencv.imgproc.Imgproc#accumulateSquare
+ * @see Imgproc#accumulate
+ * @see Imgproc#accumulateWeighted
+ * @see Imgproc#accumulateSquare
  */
     public static void accumulateProduct(Mat src1, Mat src2, Mat dst)
     {
@@ -1793,9 +1851,9 @@ public class Imgproc {
  * @param mask Optional operation mask.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/motion_analysis_and_object_tracking.html#accumulatesquare">org.opencv.imgproc.Imgproc.accumulateSquare</a>
- * @see org.opencv.imgproc.Imgproc#accumulateWeighted
- * @see org.opencv.imgproc.Imgproc#accumulateProduct
- * @see org.opencv.imgproc.Imgproc#accumulateSquare
+ * @see Imgproc#accumulateWeighted
+ * @see Imgproc#accumulateProduct
+ * @see Imgproc#accumulateSquare
  */
     public static void accumulateSquare(Mat src, Mat dst, Mat mask)
     {
@@ -1821,9 +1879,9 @@ public class Imgproc {
  * 32-bit or 64-bit floating-point.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/motion_analysis_and_object_tracking.html#accumulatesquare">org.opencv.imgproc.Imgproc.accumulateSquare</a>
- * @see org.opencv.imgproc.Imgproc#accumulateWeighted
- * @see org.opencv.imgproc.Imgproc#accumulateProduct
- * @see org.opencv.imgproc.Imgproc#accumulateSquare
+ * @see Imgproc#accumulateWeighted
+ * @see Imgproc#accumulateProduct
+ * @see Imgproc#accumulateSquare
  */
     public static void accumulateSquare(Mat src, Mat dst)
     {
@@ -1860,9 +1918,9 @@ public class Imgproc {
  * @param mask Optional operation mask.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/motion_analysis_and_object_tracking.html#accumulateweighted">org.opencv.imgproc.Imgproc.accumulateWeighted</a>
- * @see org.opencv.imgproc.Imgproc#accumulate
- * @see org.opencv.imgproc.Imgproc#accumulateProduct
- * @see org.opencv.imgproc.Imgproc#accumulateSquare
+ * @see Imgproc#accumulate
+ * @see Imgproc#accumulateProduct
+ * @see Imgproc#accumulateSquare
  */
     public static void accumulateWeighted(Mat src, Mat dst, double alpha, Mat mask)
     {
@@ -1893,14 +1951,127 @@ public class Imgproc {
  * @param alpha Weight of the input image.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/motion_analysis_and_object_tracking.html#accumulateweighted">org.opencv.imgproc.Imgproc.accumulateWeighted</a>
- * @see org.opencv.imgproc.Imgproc#accumulate
- * @see org.opencv.imgproc.Imgproc#accumulateProduct
- * @see org.opencv.imgproc.Imgproc#accumulateSquare
+ * @see Imgproc#accumulate
+ * @see Imgproc#accumulateProduct
+ * @see Imgproc#accumulateSquare
  */
     public static void accumulateWeighted(Mat src, Mat dst, double alpha)
     {
 
         accumulateWeighted_1(src.nativeObj, dst.nativeObj, alpha);
+
+        return;
+    }
+
+
+    //
+    // C++:  void adaptiveBilateralFilter(Mat src, Mat& dst, Size ksize, double sigmaSpace, double maxSigmaColor = 20.0, Point anchor = Point(-1, -1), int borderType = BORDER_DEFAULT)
+    //
+
+/**
+ * <p>Applies the adaptive bilateral filter to an image.</p>
+ *
+ * <p>A main part of our strategy will be to load each raw pixel once, and reuse it
+ * to calculate all pixels in the output (filtered) image that need this pixel
+ * value. The math of the filter is that of the usual bilateral filter, except
+ * that the sigma color is calculated in the neighborhood, and clamped by the
+ * optional input value.</p>
+ *
+ * @param src The source image
+ * @param dst The destination image; will have the same size and the same type
+ * as src
+ * @param ksize The kernel size. This is the neighborhood where the local
+ * variance will be calculated, and where pixels will contribute (in a weighted
+ * manner).
+ * @param sigmaSpace Filter sigma in the coordinate space. Larger value of the
+ * parameter means that farther pixels will influence each other (as long as
+ * their colors are close enough; see sigmaColor). Then d>0, it specifies the
+ * neighborhood size regardless of sigmaSpace, otherwise d is proportional to
+ * sigmaSpace.
+ * @param maxSigmaColor Maximum allowed sigma color (will clamp the value
+ * calculated in the ksize neighborhood. Larger value of the parameter means
+ * that more dissimilar pixels will influence each other (as long as their
+ * colors are close enough; see sigmaColor). Then d>0, it specifies the
+ * neighborhood size regardless of sigmaSpace, otherwise d is proportional to
+ * sigmaSpace.
+ * @param anchor a anchor
+ * @param borderType Pixel extrapolation method.
+ *
+ * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#adaptivebilateralfilter">org.opencv.imgproc.Imgproc.adaptiveBilateralFilter</a>
+ */
+    public static void adaptiveBilateralFilter(Mat src, Mat dst, Size ksize, double sigmaSpace, double maxSigmaColor, Point anchor, int borderType)
+    {
+
+        adaptiveBilateralFilter_0(src.nativeObj, dst.nativeObj, ksize.width, ksize.height, sigmaSpace, maxSigmaColor, anchor.x, anchor.y, borderType);
+
+        return;
+    }
+
+/**
+ * <p>Applies the adaptive bilateral filter to an image.</p>
+ *
+ * <p>A main part of our strategy will be to load each raw pixel once, and reuse it
+ * to calculate all pixels in the output (filtered) image that need this pixel
+ * value. The math of the filter is that of the usual bilateral filter, except
+ * that the sigma color is calculated in the neighborhood, and clamped by the
+ * optional input value.</p>
+ *
+ * @param src The source image
+ * @param dst The destination image; will have the same size and the same type
+ * as src
+ * @param ksize The kernel size. This is the neighborhood where the local
+ * variance will be calculated, and where pixels will contribute (in a weighted
+ * manner).
+ * @param sigmaSpace Filter sigma in the coordinate space. Larger value of the
+ * parameter means that farther pixels will influence each other (as long as
+ * their colors are close enough; see sigmaColor). Then d>0, it specifies the
+ * neighborhood size regardless of sigmaSpace, otherwise d is proportional to
+ * sigmaSpace.
+ * @param maxSigmaColor Maximum allowed sigma color (will clamp the value
+ * calculated in the ksize neighborhood. Larger value of the parameter means
+ * that more dissimilar pixels will influence each other (as long as their
+ * colors are close enough; see sigmaColor). Then d>0, it specifies the
+ * neighborhood size regardless of sigmaSpace, otherwise d is proportional to
+ * sigmaSpace.
+ * @param anchor a anchor
+ *
+ * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#adaptivebilateralfilter">org.opencv.imgproc.Imgproc.adaptiveBilateralFilter</a>
+ */
+    public static void adaptiveBilateralFilter(Mat src, Mat dst, Size ksize, double sigmaSpace, double maxSigmaColor, Point anchor)
+    {
+
+        adaptiveBilateralFilter_1(src.nativeObj, dst.nativeObj, ksize.width, ksize.height, sigmaSpace, maxSigmaColor, anchor.x, anchor.y);
+
+        return;
+    }
+
+/**
+ * <p>Applies the adaptive bilateral filter to an image.</p>
+ *
+ * <p>A main part of our strategy will be to load each raw pixel once, and reuse it
+ * to calculate all pixels in the output (filtered) image that need this pixel
+ * value. The math of the filter is that of the usual bilateral filter, except
+ * that the sigma color is calculated in the neighborhood, and clamped by the
+ * optional input value.</p>
+ *
+ * @param src The source image
+ * @param dst The destination image; will have the same size and the same type
+ * as src
+ * @param ksize The kernel size. This is the neighborhood where the local
+ * variance will be calculated, and where pixels will contribute (in a weighted
+ * manner).
+ * @param sigmaSpace Filter sigma in the coordinate space. Larger value of the
+ * parameter means that farther pixels will influence each other (as long as
+ * their colors are close enough; see sigmaColor). Then d>0, it specifies the
+ * neighborhood size regardless of sigmaSpace, otherwise d is proportional to
+ * sigmaSpace.
+ *
+ * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#adaptivebilateralfilter">org.opencv.imgproc.Imgproc.adaptiveBilateralFilter</a>
+ */
+    public static void adaptiveBilateralFilter(Mat src, Mat dst, Size ksize, double sigmaSpace)
+    {
+
+        adaptiveBilateralFilter_2(src.nativeObj, dst.nativeObj, ksize.width, ksize.height, sigmaSpace);
 
         return;
     }
@@ -1957,9 +2128,9 @@ public class Imgproc {
  * below). Normally, it is positive but may be zero or negative as well.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/miscellaneous_transformations.html#adaptivethreshold">org.opencv.imgproc.Imgproc.adaptiveThreshold</a>
- * @see org.opencv.imgproc.Imgproc#threshold
- * @see org.opencv.imgproc.Imgproc#GaussianBlur
- * @see org.opencv.imgproc.Imgproc#blur
+ * @see Imgproc#threshold
+ * @see Imgproc#GaussianBlur
+ * @see Imgproc#blur
  */
     public static void adaptiveThreshold(Mat src, Mat dst, double maxValue, int adaptiveMethod, int thresholdType, int blockSize, double C)
     {
@@ -1982,7 +2153,7 @@ public class Imgproc {
  * less or equal to the specified precision. It uses the Douglas-Peucker
  * algorithm http://en.wikipedia.org/wiki/Ramer-Douglas-Peucker_algorithm</p>
  *
- * <p>See http://code.opencv.org/projects/opencv/repository/revisions/master/entry/samples/cpp/contours.cpp
+ * <p>See https://github.com/Itseez/opencv/tree/master/samples/cpp/contours2.cpp
  * for the function usage model.</p>
  *
  * @param curve Input vector of a 2D point stored in:
@@ -2160,10 +2331,10 @@ public class Imgproc {
  * image.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#blur">org.opencv.imgproc.Imgproc.blur</a>
- * @see org.opencv.imgproc.Imgproc#boxFilter
- * @see org.opencv.imgproc.Imgproc#GaussianBlur
- * @see org.opencv.imgproc.Imgproc#bilateralFilter
- * @see org.opencv.imgproc.Imgproc#medianBlur
+ * @see Imgproc#boxFilter
+ * @see Imgproc#GaussianBlur
+ * @see Imgproc#bilateralFilter
+ * @see Imgproc#medianBlur
  */
     public static void blur(Mat src, Mat dst, Size ksize, Point anchor, int borderType)
     {
@@ -2196,10 +2367,10 @@ public class Imgproc {
  * that the anchor is at the kernel center.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#blur">org.opencv.imgproc.Imgproc.blur</a>
- * @see org.opencv.imgproc.Imgproc#boxFilter
- * @see org.opencv.imgproc.Imgproc#GaussianBlur
- * @see org.opencv.imgproc.Imgproc#bilateralFilter
- * @see org.opencv.imgproc.Imgproc#medianBlur
+ * @see Imgproc#boxFilter
+ * @see Imgproc#GaussianBlur
+ * @see Imgproc#bilateralFilter
+ * @see Imgproc#medianBlur
  */
     public static void blur(Mat src, Mat dst, Size ksize, Point anchor)
     {
@@ -2230,10 +2401,10 @@ public class Imgproc {
  * @param ksize blurring kernel size.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#blur">org.opencv.imgproc.Imgproc.blur</a>
- * @see org.opencv.imgproc.Imgproc#boxFilter
- * @see org.opencv.imgproc.Imgproc#GaussianBlur
- * @see org.opencv.imgproc.Imgproc#bilateralFilter
- * @see org.opencv.imgproc.Imgproc#medianBlur
+ * @see Imgproc#boxFilter
+ * @see Imgproc#GaussianBlur
+ * @see Imgproc#bilateralFilter
+ * @see Imgproc#medianBlur
  */
     public static void blur(Mat src, Mat dst, Size ksize)
     {
@@ -2279,7 +2450,7 @@ public class Imgproc {
  * regardless of <code>p</code> and <code>len</code>.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#borderinterpolate">org.opencv.imgproc.Imgproc.borderInterpolate</a>
- * @see org.opencv.imgproc.Imgproc#copyMakeBorder
+ * @see Imgproc#copyMakeBorder
  */
     public static int borderInterpolate(int p, int len, int borderType)
     {
@@ -2349,11 +2520,11 @@ public class Imgproc {
  * image.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#boxfilter">org.opencv.imgproc.Imgproc.boxFilter</a>
- * @see org.opencv.imgproc.Imgproc#GaussianBlur
- * @see org.opencv.imgproc.Imgproc#medianBlur
- * @see org.opencv.imgproc.Imgproc#integral
- * @see org.opencv.imgproc.Imgproc#bilateralFilter
- * @see org.opencv.imgproc.Imgproc#blur
+ * @see Imgproc#GaussianBlur
+ * @see Imgproc#medianBlur
+ * @see Imgproc#integral
+ * @see Imgproc#bilateralFilter
+ * @see Imgproc#blur
  */
     public static void boxFilter(Mat src, Mat dst, int ddepth, Size ksize, Point anchor, boolean normalize, int borderType)
     {
@@ -2392,11 +2563,11 @@ public class Imgproc {
  * area or not.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#boxfilter">org.opencv.imgproc.Imgproc.boxFilter</a>
- * @see org.opencv.imgproc.Imgproc#GaussianBlur
- * @see org.opencv.imgproc.Imgproc#medianBlur
- * @see org.opencv.imgproc.Imgproc#integral
- * @see org.opencv.imgproc.Imgproc#bilateralFilter
- * @see org.opencv.imgproc.Imgproc#blur
+ * @see Imgproc#GaussianBlur
+ * @see Imgproc#medianBlur
+ * @see Imgproc#integral
+ * @see Imgproc#bilateralFilter
+ * @see Imgproc#blur
  */
     public static void boxFilter(Mat src, Mat dst, int ddepth, Size ksize, Point anchor, boolean normalize)
     {
@@ -2431,11 +2602,11 @@ public class Imgproc {
  * @param ksize blurring kernel size.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#boxfilter">org.opencv.imgproc.Imgproc.boxFilter</a>
- * @see org.opencv.imgproc.Imgproc#GaussianBlur
- * @see org.opencv.imgproc.Imgproc#medianBlur
- * @see org.opencv.imgproc.Imgproc#integral
- * @see org.opencv.imgproc.Imgproc#bilateralFilter
- * @see org.opencv.imgproc.Imgproc#blur
+ * @see Imgproc#GaussianBlur
+ * @see Imgproc#medianBlur
+ * @see Imgproc#integral
+ * @see Imgproc#bilateralFilter
+ * @see Imgproc#blur
  */
     public static void boxFilter(Mat src, Mat dst, int ddepth, Size ksize)
     {
@@ -2492,7 +2663,7 @@ public class Imgproc {
  * @param scale Optional scale factor for the output back projection.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/histograms.html#calcbackproject">org.opencv.imgproc.Imgproc.calcBackProject</a>
- * @see org.opencv.imgproc.Imgproc#calcHist
+ * @see Imgproc#calcHist
  */
     public static void calcBackProject(List<Mat> images, MatOfInt channels, Mat hist, Mat dst, MatOfFloat ranges, double scale)
     {
@@ -2607,6 +2778,16 @@ public class Imgproc {
  *
  * <p>waitKey();</p>
  *
+ *
+ * <p>Note: </code></p>
+ * <ul>
+ *   <li> An example for creating histograms of an image can be found at
+ * opencv_source_code/samples/cpp/demhist.cpp
+ *   <li> (Python) An example for creating color histograms can be found at
+ * opencv_source/samples/python2/color_histogram.py
+ *   <li> (Python) An example illustrating RGB and grayscale histogram plotting
+ * can be found at opencv_source/samples/python2/hist.py
+ * </ul>
  *
  * @param images Source arrays. They all should have the same depth,
  * <code>CV_8U</code> or <code>CV_32F</code>, and the same size. Each of them
@@ -2749,6 +2930,16 @@ public class Imgproc {
  *
  * <p>waitKey();</p>
  *
+ *
+ * <p>Note: </code></p>
+ * <ul>
+ *   <li> An example for creating histograms of an image can be found at
+ * opencv_source_code/samples/cpp/demhist.cpp
+ *   <li> (Python) An example for creating color histograms can be found at
+ * opencv_source/samples/python2/color_histogram.py
+ *   <li> (Python) An example illustrating RGB and grayscale histogram plotting
+ * can be found at opencv_source/samples/python2/hist.py
+ * </ul>
  *
  * @param images Source arrays. They all should have the same depth,
  * <code>CV_8U</code> or <code>CV_32F</code>, and the same size. Each of them
@@ -3009,9 +3200,9 @@ public class Imgproc {
  * for the nearest-neighbor or for a more complex interpolation.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#convertmaps">org.opencv.imgproc.Imgproc.convertMaps</a>
- * @see org.opencv.imgproc.Imgproc#remap
- * @see org.opencv.imgproc.Imgproc#initUndistortRectifyMap
- * @see org.opencv.imgproc.Imgproc#undistort
+ * @see Imgproc#remap
+ * @see Imgproc#initUndistortRectifyMap
+ * @see Imgproc#undistort
  */
     public static void convertMaps(Mat map1, Mat map2, Mat dstmap1, Mat dstmap2, int dstmap1type, boolean nninterpolation)
     {
@@ -3051,9 +3242,9 @@ public class Imgproc {
  * <code>CV_16SC2</code>, <code>CV_32FC1</code>, or <code>CV_32FC2</code>.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#convertmaps">org.opencv.imgproc.Imgproc.convertMaps</a>
- * @see org.opencv.imgproc.Imgproc#remap
- * @see org.opencv.imgproc.Imgproc#initUndistortRectifyMap
- * @see org.opencv.imgproc.Imgproc#undistort
+ * @see Imgproc#remap
+ * @see Imgproc#initUndistortRectifyMap
+ * @see Imgproc#undistort
  */
     public static void convertMaps(Mat map1, Mat map2, Mat dstmap1, Mat dstmap2, int dstmap1type)
     {
@@ -3075,6 +3266,12 @@ public class Imgproc {
  * algorithm [Sklansky82] that has *O(N logN)* complexity in the current
  * implementation. See the OpenCV sample <code>convexhull.cpp</code> that
  * demonstrates the usage of different function variants.</p>
+ *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the convexHull functionality can be found at
+ * opencv_source_code/samples/cpp/convexhull.cpp
+ * </ul>
  *
  * @param points Input 2D point set, stored in <code>std.vector</code> or
  * <code>Mat</code>.
@@ -3107,6 +3304,12 @@ public class Imgproc {
  * algorithm [Sklansky82] that has *O(N logN)* complexity in the current
  * implementation. See the OpenCV sample <code>convexhull.cpp</code> that
  * demonstrates the usage of different function variants.</p>
+ *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the convexHull functionality can be found at
+ * opencv_source_code/samples/cpp/convexhull.cpp
+ * </ul>
  *
  * @param points Input 2D point set, stored in <code>std.vector</code> or
  * <code>Mat</code>.
@@ -3248,7 +3451,7 @@ public class Imgproc {
  * @param value Border value if <code>borderType==BORDER_CONSTANT</code>.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#copymakeborder">org.opencv.imgproc.Imgproc.copyMakeBorder</a>
- * @see org.opencv.imgproc.Imgproc#borderInterpolate
+ * @see Imgproc#borderInterpolate
  */
     public static void copyMakeBorder(Mat src, Mat dst, int top, int bottom, int left, int right, int borderType, Scalar value)
     {
@@ -3316,7 +3519,7 @@ public class Imgproc {
  * @param borderType Border type. See "borderInterpolate" for details.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#copymakeborder">org.opencv.imgproc.Imgproc.copyMakeBorder</a>
- * @see org.opencv.imgproc.Imgproc#borderInterpolate
+ * @see Imgproc#borderInterpolate
  */
     public static void copyMakeBorder(Mat src, Mat dst, int top, int bottom, int left, int right, int borderType)
     {
@@ -3358,6 +3561,12 @@ public class Imgproc {
  *
  * <p>The output of the function can be used for robust edge or corner detection.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> (Python) An example on how to use eigenvectors and eigenvalues to
+ * estimate image texture flow direction can be found at opencv_source_code/samples/python2/texture_flow.py
+ * </ul>
+ *
  * @param src Input single-channel 8-bit or floating-point image.
  * @param dst Image to store the results. It has the same size as
  * <code>src</code> and the type <code>CV_32FC(6)</code>.
@@ -3366,9 +3575,9 @@ public class Imgproc {
  * @param borderType Pixel extrapolation method. See "borderInterpolate".
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/feature_detection.html#cornereigenvalsandvecs">org.opencv.imgproc.Imgproc.cornerEigenValsAndVecs</a>
- * @see org.opencv.imgproc.Imgproc#cornerHarris
- * @see org.opencv.imgproc.Imgproc#cornerMinEigenVal
- * @see org.opencv.imgproc.Imgproc#preCornerDetect
+ * @see Imgproc#cornerHarris
+ * @see Imgproc#cornerMinEigenVal
+ * @see Imgproc#preCornerDetect
  */
     public static void cornerEigenValsAndVecs(Mat src, Mat dst, int blockSize, int ksize, int borderType)
     {
@@ -3405,6 +3614,12 @@ public class Imgproc {
  *
  * <p>The output of the function can be used for robust edge or corner detection.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> (Python) An example on how to use eigenvectors and eigenvalues to
+ * estimate image texture flow direction can be found at opencv_source_code/samples/python2/texture_flow.py
+ * </ul>
+ *
  * @param src Input single-channel 8-bit or floating-point image.
  * @param dst Image to store the results. It has the same size as
  * <code>src</code> and the type <code>CV_32FC(6)</code>.
@@ -3412,9 +3627,9 @@ public class Imgproc {
  * @param ksize Aperture parameter for the "Sobel" operator.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/feature_detection.html#cornereigenvalsandvecs">org.opencv.imgproc.Imgproc.cornerEigenValsAndVecs</a>
- * @see org.opencv.imgproc.Imgproc#cornerHarris
- * @see org.opencv.imgproc.Imgproc#cornerMinEigenVal
- * @see org.opencv.imgproc.Imgproc#preCornerDetect
+ * @see Imgproc#cornerHarris
+ * @see Imgproc#cornerMinEigenVal
+ * @see Imgproc#preCornerDetect
  */
     public static void cornerEigenValsAndVecs(Mat src, Mat dst, int blockSize, int ksize)
     {
@@ -3629,6 +3844,13 @@ public class Imgproc {
 
 
     //
+    // C++:  Ptr_CLAHE createCLAHE(double clipLimit = 40.0, Size tileGridSize = Size(8, 8))
+    //
+
+    // Return type 'Ptr_CLAHE' is not supported, skipping the function
+
+
+    //
     // C++:  void createHanningWindow(Mat& dst, Size winSize, int type)
     //
 
@@ -3652,7 +3874,7 @@ public class Imgproc {
  * @param type Created array type
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/motion_analysis_and_object_tracking.html#createhanningwindow">org.opencv.imgproc.Imgproc.createHanningWindow</a>
- * @see org.opencv.imgproc.Imgproc#phaseCorrelate
+ * @see Imgproc#phaseCorrelate
  */
     public static void createHanningWindow(Mat dst, Size winSize, int type)
     {
@@ -4388,6 +4610,12 @@ public class Imgproc {
  * (<code>iterations</code>) times. In case of multi-channel images, each
  * channel is processed independently.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the morphological dilate operation can be found at
+ * opencv_source_code/samples/cpp/morphology2.cpp
+ * </ul>
+ *
  * @param src input image; the number of channels can be arbitrary, but the
  * depth should be one of <code>CV_8U</code>, <code>CV_16U</code>,
  * <code>CV_16S</code>, <code>CV_32F" or </code>CV_64F".
@@ -4402,8 +4630,8 @@ public class Imgproc {
  * "createMorphologyFilter" for details).
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#dilate">org.opencv.imgproc.Imgproc.dilate</a>
- * @see org.opencv.imgproc.Imgproc#erode
- * @see org.opencv.imgproc.Imgproc#morphologyEx
+ * @see Imgproc#erode
+ * @see Imgproc#morphologyEx
  */
     public static void dilate(Mat src, Mat dst, Mat kernel, Point anchor, int iterations, int borderType, Scalar borderValue)
     {
@@ -4426,6 +4654,12 @@ public class Imgproc {
  * (<code>iterations</code>) times. In case of multi-channel images, each
  * channel is processed independently.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the morphological dilate operation can be found at
+ * opencv_source_code/samples/cpp/morphology2.cpp
+ * </ul>
+ *
  * @param src input image; the number of channels can be arbitrary, but the
  * depth should be one of <code>CV_8U</code>, <code>CV_16U</code>,
  * <code>CV_16S</code>, <code>CV_32F" or </code>CV_64F".
@@ -4436,8 +4670,8 @@ public class Imgproc {
  * @param iterations number of times dilation is applied.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#dilate">org.opencv.imgproc.Imgproc.dilate</a>
- * @see org.opencv.imgproc.Imgproc#erode
- * @see org.opencv.imgproc.Imgproc#morphologyEx
+ * @see Imgproc#erode
+ * @see Imgproc#morphologyEx
  */
     public static void dilate(Mat src, Mat dst, Mat kernel, Point anchor, int iterations)
     {
@@ -4460,6 +4694,12 @@ public class Imgproc {
  * (<code>iterations</code>) times. In case of multi-channel images, each
  * channel is processed independently.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the morphological dilate operation can be found at
+ * opencv_source_code/samples/cpp/morphology2.cpp
+ * </ul>
+ *
  * @param src input image; the number of channels can be arbitrary, but the
  * depth should be one of <code>CV_8U</code>, <code>CV_16U</code>,
  * <code>CV_16S</code>, <code>CV_32F" or </code>CV_64F".
@@ -4467,8 +4707,8 @@ public class Imgproc {
  * @param kernel a kernel
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#dilate">org.opencv.imgproc.Imgproc.dilate</a>
- * @see org.opencv.imgproc.Imgproc#erode
- * @see org.opencv.imgproc.Imgproc#morphologyEx
+ * @see Imgproc#erode
+ * @see Imgproc#morphologyEx
  */
     public static void dilate(Mat src, Mat dst, Mat kernel)
     {
@@ -4542,6 +4782,14 @@ public class Imgproc {
  * Currently, the second variant can use only the approximate distance transform
  * algorithm, i.e. <code>maskSize=CV_DIST_MASK_PRECISE</code> is not supported
  * yet.</p>
+ *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example on using the distance transform can be found at
+ * opencv_source_code/samples/cpp/distrans.cpp
+ *   <li> (Python) An example on using the distance transform can be found at
+ * opencv_source/samples/python2/distrans.py
+ * </ul>
  *
  * @param src 8-bit, single-channel (binary) source image.
  * @param dst Output image with calculated distances. It is a 32-bit
@@ -4628,6 +4876,14 @@ public class Imgproc {
  * Currently, the second variant can use only the approximate distance transform
  * algorithm, i.e. <code>maskSize=CV_DIST_MASK_PRECISE</code> is not supported
  * yet.</p>
+ *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example on using the distance transform can be found at
+ * opencv_source_code/samples/cpp/distrans.cpp
+ *   <li> (Python) An example on using the distance transform can be found at
+ * opencv_source/samples/python2/distrans.py
+ * </ul>
  *
  * @param src 8-bit, single-channel (binary) source image.
  * @param dst Output image with calculated distances. It is a 32-bit
@@ -4717,6 +4973,14 @@ public class Imgproc {
  * Currently, the second variant can use only the approximate distance transform
  * algorithm, i.e. <code>maskSize=CV_DIST_MASK_PRECISE</code> is not supported
  * yet.</p>
+ *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example on using the distance transform can be found at
+ * opencv_source_code/samples/cpp/distrans.cpp
+ *   <li> (Python) An example on using the distance transform can be found at
+ * opencv_source/samples/python2/distrans.py
+ * </ul>
  *
  * @param src 8-bit, single-channel (binary) source image.
  * @param dst Output image with calculated distances. It is a 32-bit
@@ -4812,6 +5076,16 @@ public class Imgproc {
  *
  * <p>waitKey(0);</p>
  *
+ *
+ * <p>Note: </code></p>
+ * <ul>
+ *   <li> An example using the drawContour functionality can be found at
+ * opencv_source_code/samples/cpp/contours2.cpp
+ *   <li> An example using drawContours to clean up a background segmentation
+ * result at opencv_source_code/samples/cpp/segment_objects.cpp
+ *   <li> (Python) An example using the drawContour functionality can be found
+ * at opencv_source/samples/python2/contours.py
+ * </ul>
  *
  * @param image Destination image.
  * @param contours All the input contours. Each contour is stored as a point
@@ -4910,6 +5184,16 @@ public class Imgproc {
  * <p>waitKey(0);</p>
  *
  *
+ * <p>Note: </code></p>
+ * <ul>
+ *   <li> An example using the drawContour functionality can be found at
+ * opencv_source_code/samples/cpp/contours2.cpp
+ *   <li> An example using drawContours to clean up a background segmentation
+ * result at opencv_source_code/samples/cpp/segment_objects.cpp
+ *   <li> (Python) An example using the drawContour functionality can be found
+ * at opencv_source/samples/python2/contours.py
+ * </ul>
+ *
  * @param image Destination image.
  * @param contours All the input contours. Each contour is stored as a point
  * vector.
@@ -4997,6 +5281,16 @@ public class Imgproc {
  * <p>waitKey(0);</p>
  *
  *
+ * <p>Note: </code></p>
+ * <ul>
+ *   <li> An example using the drawContour functionality can be found at
+ * opencv_source_code/samples/cpp/contours2.cpp
+ *   <li> An example using drawContours to clean up a background segmentation
+ * result at opencv_source_code/samples/cpp/segment_objects.cpp
+ *   <li> (Python) An example using the drawContour functionality can be found
+ * at opencv_source/samples/python2/contours.py
+ * </ul>
+ *
  * @param image Destination image.
  * @param contours All the input contours. Each contour is stored as a point
  * vector.
@@ -5073,6 +5367,12 @@ public class Imgproc {
  * (<code>iterations</code>) times. In case of multi-channel images, each
  * channel is processed independently.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the morphological erode operation can be found at
+ * opencv_source_code/samples/cpp/morphology2.cpp
+ * </ul>
+ *
  * @param src input image; the number of channels can be arbitrary, but the
  * depth should be one of <code>CV_8U</code>, <code>CV_16U</code>,
  * <code>CV_16S</code>, <code>CV_32F" or </code>CV_64F".
@@ -5087,8 +5387,8 @@ public class Imgproc {
  * "createMorphologyFilter" for details).
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#erode">org.opencv.imgproc.Imgproc.erode</a>
- * @see org.opencv.imgproc.Imgproc#morphologyEx
- * @see org.opencv.imgproc.Imgproc#dilate
+ * @see Imgproc#morphologyEx
+ * @see Imgproc#dilate
  */
     public static void erode(Mat src, Mat dst, Mat kernel, Point anchor, int iterations, int borderType, Scalar borderValue)
     {
@@ -5111,6 +5411,12 @@ public class Imgproc {
  * (<code>iterations</code>) times. In case of multi-channel images, each
  * channel is processed independently.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the morphological erode operation can be found at
+ * opencv_source_code/samples/cpp/morphology2.cpp
+ * </ul>
+ *
  * @param src input image; the number of channels can be arbitrary, but the
  * depth should be one of <code>CV_8U</code>, <code>CV_16U</code>,
  * <code>CV_16S</code>, <code>CV_32F" or </code>CV_64F".
@@ -5121,8 +5427,8 @@ public class Imgproc {
  * @param iterations number of times erosion is applied.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#erode">org.opencv.imgproc.Imgproc.erode</a>
- * @see org.opencv.imgproc.Imgproc#morphologyEx
- * @see org.opencv.imgproc.Imgproc#dilate
+ * @see Imgproc#morphologyEx
+ * @see Imgproc#dilate
  */
     public static void erode(Mat src, Mat dst, Mat kernel, Point anchor, int iterations)
     {
@@ -5145,6 +5451,12 @@ public class Imgproc {
  * (<code>iterations</code>) times. In case of multi-channel images, each
  * channel is processed independently.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the morphological erode operation can be found at
+ * opencv_source_code/samples/cpp/morphology2.cpp
+ * </ul>
+ *
  * @param src input image; the number of channels can be arbitrary, but the
  * depth should be one of <code>CV_8U</code>, <code>CV_16U</code>,
  * <code>CV_16S</code>, <code>CV_32F" or </code>CV_64F".
@@ -5152,8 +5464,8 @@ public class Imgproc {
  * @param kernel a kernel
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#erode">org.opencv.imgproc.Imgproc.erode</a>
- * @see org.opencv.imgproc.Imgproc#morphologyEx
- * @see org.opencv.imgproc.Imgproc#dilate
+ * @see Imgproc#morphologyEx
+ * @see Imgproc#dilate
  */
     public static void erode(Mat src, Mat dst, Mat kernel)
     {
@@ -5221,9 +5533,9 @@ public class Imgproc {
  * details).
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#filter2d">org.opencv.imgproc.Imgproc.filter2D</a>
- * @see org.opencv.imgproc.Imgproc#matchTemplate
+ * @see Imgproc#matchTemplate
  * @see org.opencv.core.Core#dft
- * @see org.opencv.imgproc.Imgproc#sepFilter2D
+ * @see Imgproc#sepFilter2D
  */
     public static void filter2D(Mat src, Mat dst, int ddepth, Mat kernel, Point anchor, double delta, int borderType)
     {
@@ -5284,9 +5596,9 @@ public class Imgproc {
  * in <code>dst</code>.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#filter2d">org.opencv.imgproc.Imgproc.filter2D</a>
- * @see org.opencv.imgproc.Imgproc#matchTemplate
+ * @see Imgproc#matchTemplate
  * @see org.opencv.core.Core#dft
- * @see org.opencv.imgproc.Imgproc#sepFilter2D
+ * @see Imgproc#sepFilter2D
  */
     public static void filter2D(Mat src, Mat dst, int ddepth, Mat kernel, Point anchor, double delta)
     {
@@ -5342,9 +5654,9 @@ public class Imgproc {
  * "split" and process them individually.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#filter2d">org.opencv.imgproc.Imgproc.filter2D</a>
- * @see org.opencv.imgproc.Imgproc#matchTemplate
+ * @see Imgproc#matchTemplate
  * @see org.opencv.core.Core#dft
- * @see org.opencv.imgproc.Imgproc#sepFilter2D
+ * @see Imgproc#sepFilter2D
  */
     public static void filter2D(Mat src, Mat dst, int ddepth, Mat kernel)
     {
@@ -5378,6 +5690,18 @@ public class Imgproc {
  * parameters). If you use the old Python interface then these parameters have
  * the <code>CV_</code> prefix (for example, use <code>cv.CV_RETR_LIST</code>
  * and <code>cv.CV_CHAIN_APPROX_NONE</code>).</p>
+ *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the findContour functionality can be found at
+ * opencv_source_code/samples/cpp/contours2.cpp
+ *   <li> An example using findContours to clean up a background segmentation
+ * result at opencv_source_code/samples/cpp/segment_objects.cpp
+ *   <li> (Python) An example using the findContour functionality can be found
+ * at opencv_source/samples/python2/contours.py
+ *   <li> (Python) An example of detecting squares in an image can be found at
+ * opencv_source/samples/python2/squares.py
+ * </ul>
  *
  * @param image Source, an 8-bit single-channel image. Non-zero pixels are
  * treated as 1's. Zero pixels remain 0's, so the image is treated as
@@ -5459,6 +5783,18 @@ public class Imgproc {
  * the <code>CV_</code> prefix (for example, use <code>cv.CV_RETR_LIST</code>
  * and <code>cv.CV_CHAIN_APPROX_NONE</code>).</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the findContour functionality can be found at
+ * opencv_source_code/samples/cpp/contours2.cpp
+ *   <li> An example using findContours to clean up a background segmentation
+ * result at opencv_source_code/samples/cpp/segment_objects.cpp
+ *   <li> (Python) An example using the findContour functionality can be found
+ * at opencv_source/samples/python2/contours.py
+ *   <li> (Python) An example of detecting squares in an image can be found at
+ * opencv_source/samples/python2/squares.py
+ * </ul>
+ *
  * @param image Source, an 8-bit single-channel image. Non-zero pixels are
  * treated as 1's. Zero pixels remain 0's, so the image is treated as
  * <code>binary</code>. You can use "compare", "inRange", "threshold",
@@ -5526,7 +5862,16 @@ public class Imgproc {
  *
  * <p>The function calculates the ellipse that fits (in a least-squares sense) a
  * set of 2D points best of all. It returns the rotated rectangle in which the
- * ellipse is inscribed. The algorithm [Fitzgibbon95] is used.</p>
+ * ellipse is inscribed. The algorithm [Fitzgibbon95] is used.
+ * Developer should keep in mind that it is possible that the returned
+ * ellipse/rotatedRect data contains negative indices, due to the data points
+ * being close to the border of the containing Mat element.</p>
+ *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the fitEllipse technique can be found at
+ * opencv_source_code/samples/cpp/fitellipse.cpp
+ * </ul>
  *
  * @param points Input 2D point set, stored in:
  * <ul>
@@ -5596,7 +5941,11 @@ public class Imgproc {
  * <p>The algorithm is based on the M-estimator (http://en.wikipedia.org/wiki/M-estimator)
  * technique that iteratively fits the line using the weighted least-squares
  * algorithm. After each iteration the weights <em>w_i</em> are adjusted to be
- * inversely proportional to <em>rho(r_i)</em>.</p>
+ * inversely proportional to <em>rho(r_i)</em>... Sample code:</p>
+ * <ul>
+ *   <li> (Python) An example of robust line fitting can be found at
+ * opencv_source_code/samples/python2/fitline.py
+ * </ul>
  *
  * @param points Input vector of 2D or 3D points, stored in <code>std.vector<></code>
  * or <code>Mat</code>.
@@ -5692,8 +6041,15 @@ public class Imgproc {
  *
  * <p>Use these functions to either mark a connected component with the specified
  * color in-place, or build a mask and then extract the contour, or copy the
- * region to another image, and so on. Various modes of the function are
- * demonstrated in the <code>floodfill.cpp</code> sample.</p>
+ * region to another image, and so on.</p>
+ *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the FloodFill technique can be found at
+ * opencv_source_code/samples/cpp/ffilldemo.cpp
+ *   <li> (Python) An example using the FloodFill technique can be found at
+ * opencv_source_code/samples/python2/floodfill.cpp
+ * </ul>
  *
  * @param image Input/output 1- or 3-channel, 8-bit, or floating-point image. It
  * is modified by the function unless the <code>FLOODFILL_MASK_ONLY</code> flag
@@ -5733,7 +6089,7 @@ public class Imgproc {
  * </ul>
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/miscellaneous_transformations.html#floodfill">org.opencv.imgproc.Imgproc.floodFill</a>
- * @see org.opencv.imgproc.Imgproc#findContours
+ * @see Imgproc#findContours
  */
     public static int floodFill(Mat image, Mat mask, Point seedPoint, Scalar newVal, Rect rect, Scalar loDiff, Scalar upDiff, int flags)
     {
@@ -5804,8 +6160,15 @@ public class Imgproc {
  *
  * <p>Use these functions to either mark a connected component with the specified
  * color in-place, or build a mask and then extract the contour, or copy the
- * region to another image, and so on. Various modes of the function are
- * demonstrated in the <code>floodfill.cpp</code> sample.</p>
+ * region to another image, and so on.</p>
+ *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the FloodFill technique can be found at
+ * opencv_source_code/samples/cpp/ffilldemo.cpp
+ *   <li> (Python) An example using the FloodFill technique can be found at
+ * opencv_source_code/samples/python2/floodfill.cpp
+ * </ul>
  *
  * @param image Input/output 1- or 3-channel, 8-bit, or floating-point image. It
  * is modified by the function unless the <code>FLOODFILL_MASK_ONLY</code> flag
@@ -5825,7 +6188,7 @@ public class Imgproc {
  * @param newVal New value of the repainted domain pixels.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/miscellaneous_transformations.html#floodfill">org.opencv.imgproc.Imgproc.floodFill</a>
- * @see org.opencv.imgproc.Imgproc#findContours
+ * @see Imgproc#findContours
  */
     public static int floodFill(Mat image, Mat mask, Point seedPoint, Scalar newVal)
     {
@@ -5860,7 +6223,7 @@ public class Imgproc {
  * destination image.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#getaffinetransform">org.opencv.imgproc.Imgproc.getAffineTransform</a>
- * @see org.opencv.imgproc.Imgproc#warpAffine
+ * @see Imgproc#warpAffine
  * @see org.opencv.core.Core#transform
  */
     public static Mat getAffineTransform(MatOfPoint2f src, MatOfPoint2f dst)
@@ -6072,10 +6435,10 @@ public class Imgproc {
  * <code>CV_64F</code>.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#getgaussiankernel">org.opencv.imgproc.Imgproc.getGaussianKernel</a>
- * @see org.opencv.imgproc.Imgproc#GaussianBlur
- * @see org.opencv.imgproc.Imgproc#sepFilter2D
- * @see org.opencv.imgproc.Imgproc#getStructuringElement
- * @see org.opencv.imgproc.Imgproc#getDerivKernels
+ * @see Imgproc#GaussianBlur
+ * @see Imgproc#sepFilter2D
+ * @see Imgproc#getStructuringElement
+ * @see Imgproc#getDerivKernels
  */
     public static Mat getGaussianKernel(int ksize, double sigma, int ktype)
     {
@@ -6108,10 +6471,10 @@ public class Imgproc {
  * 0.8</code>.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#getgaussiankernel">org.opencv.imgproc.Imgproc.getGaussianKernel</a>
- * @see org.opencv.imgproc.Imgproc#GaussianBlur
- * @see org.opencv.imgproc.Imgproc#sepFilter2D
- * @see org.opencv.imgproc.Imgproc#getStructuringElement
- * @see org.opencv.imgproc.Imgproc#getDerivKernels
+ * @see Imgproc#GaussianBlur
+ * @see Imgproc#sepFilter2D
+ * @see Imgproc#getStructuringElement
+ * @see Imgproc#getDerivKernels
  */
     public static Mat getGaussianKernel(int ksize, double sigma)
     {
@@ -6150,7 +6513,7 @@ public class Imgproc {
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#getperspectivetransform">org.opencv.imgproc.Imgproc.getPerspectiveTransform</a>
  * @see org.opencv.calib3d.Calib3d#findHomography
  * @see org.opencv.core.Core#perspectiveTransform
- * @see org.opencv.imgproc.Imgproc#warpPerspective
+ * @see Imgproc#warpPerspective
  */
     public static Mat getPerspectiveTransform(Mat src, Mat dst)
     {
@@ -6189,8 +6552,8 @@ public class Imgproc {
  * same depth as <code>src</code>.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#getrectsubpix">org.opencv.imgproc.Imgproc.getRectSubPix</a>
- * @see org.opencv.imgproc.Imgproc#warpAffine
- * @see org.opencv.imgproc.Imgproc#warpPerspective
+ * @see Imgproc#warpAffine
+ * @see Imgproc#warpPerspective
  */
     public static void getRectSubPix(Mat image, Size patchSize, Point center, Mat patch, int patchType)
     {
@@ -6222,8 +6585,8 @@ public class Imgproc {
  * @param patch a patch
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#getrectsubpix">org.opencv.imgproc.Imgproc.getRectSubPix</a>
- * @see org.opencv.imgproc.Imgproc#warpAffine
- * @see org.opencv.imgproc.Imgproc#warpPerspective
+ * @see Imgproc#warpAffine
+ * @see Imgproc#warpPerspective
  */
     public static void getRectSubPix(Mat image, Size patchSize, Point center, Mat patch)
     {
@@ -6261,8 +6624,8 @@ public class Imgproc {
  * @param scale Isotropic scale factor.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#getrotationmatrix2d">org.opencv.imgproc.Imgproc.getRotationMatrix2D</a>
- * @see org.opencv.imgproc.Imgproc#warpAffine
- * @see org.opencv.imgproc.Imgproc#getAffineTransform
+ * @see Imgproc#warpAffine
+ * @see Imgproc#getAffineTransform
  * @see org.opencv.core.Core#transform
  */
     public static Mat getRotationMatrix2D(Point center, double angle, double scale)
@@ -6424,9 +6787,9 @@ public class Imgproc {
  * @param k Free parameter of the Harris detector.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/feature_detection.html#goodfeaturestotrack">org.opencv.imgproc.Imgproc.goodFeaturesToTrack</a>
- * @see org.opencv.imgproc.Imgproc#cornerHarris
+ * @see Imgproc#cornerHarris
  * @see org.opencv.video.Video#estimateRigidTransform
- * @see org.opencv.imgproc.Imgproc#cornerMinEigenVal
+ * @see Imgproc#cornerMinEigenVal
  * @see org.opencv.video.Video#calcOpticalFlowPyrLK
  */
     public static void goodFeaturesToTrack(Mat image, MatOfPoint corners, int maxCorners, double qualityLevel, double minDistance, Mat mask, int blockSize, boolean useHarrisDetector, double k)
@@ -6477,9 +6840,9 @@ public class Imgproc {
  * corners.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/feature_detection.html#goodfeaturestotrack">org.opencv.imgproc.Imgproc.goodFeaturesToTrack</a>
- * @see org.opencv.imgproc.Imgproc#cornerHarris
+ * @see Imgproc#cornerHarris
  * @see org.opencv.video.Video#estimateRigidTransform
- * @see org.opencv.imgproc.Imgproc#cornerMinEigenVal
+ * @see Imgproc#cornerMinEigenVal
  * @see org.opencv.video.Video#calcOpticalFlowPyrLK
  */
     public static void goodFeaturesToTrack(Mat image, MatOfPoint corners, int maxCorners, double qualityLevel, double minDistance)
@@ -6501,6 +6864,14 @@ public class Imgproc {
  * <p>The function implements the GrabCut image segmentation algorithm
  * (http://en.wikipedia.org/wiki/GrabCut).
  * See the sample <code>grabcut.cpp</code> to learn how to use the function.</p>
+ *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the GrabCut algorithm can be found at
+ * opencv_source_code/samples/cpp/grabcut.cpp
+ *   <li> (Python) An example using the GrabCut algorithm can be found at
+ * opencv_source_code/samples/python2/grabcut.py
+ * </ul>
  *
  * @param img Input 8-bit 3-channel image.
  * @param mask Input/output 8-bit single-channel mask. The mask is initialized
@@ -6550,6 +6921,14 @@ public class Imgproc {
  * <p>The function implements the GrabCut image segmentation algorithm
  * (http://en.wikipedia.org/wiki/GrabCut).
  * See the sample <code>grabcut.cpp</code> to learn how to use the function.</p>
+ *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the GrabCut algorithm can be found at
+ * opencv_source_code/samples/cpp/grabcut.cpp
+ *   <li> (Python) An example using the GrabCut algorithm can be found at
+ * opencv_source_code/samples/python2/grabcut.py
+ * </ul>
  *
  * @param img Input 8-bit 3-channel image.
  * @param mask Input/output 8-bit single-channel mask. The mask is initialized
@@ -7211,6 +7590,12 @@ public class Imgproc {
  * take a color template and a color image. The result will still be a
  * single-channel image, which is easier to analyze.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> (Python) An example on how to match mouse selected regions in an image
+ * can be found at opencv_source_code/samples/python2/mouse_and_match.py
+ * </ul>
+ *
  * @param image Image where the search is running. It must be 8-bit or 32-bit
  * floating-point.
  * @param templ Searched template. It must be not greater than the source image
@@ -7251,10 +7636,10 @@ public class Imgproc {
  * example: 3, 5, 7...
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#medianblur">org.opencv.imgproc.Imgproc.medianBlur</a>
- * @see org.opencv.imgproc.Imgproc#boxFilter
- * @see org.opencv.imgproc.Imgproc#GaussianBlur
- * @see org.opencv.imgproc.Imgproc#bilateralFilter
- * @see org.opencv.imgproc.Imgproc#blur
+ * @see Imgproc#boxFilter
+ * @see Imgproc#GaussianBlur
+ * @see Imgproc#bilateralFilter
+ * @see Imgproc#blur
  */
     public static void medianBlur(Mat src, Mat dst, int ksize)
     {
@@ -7275,7 +7660,9 @@ public class Imgproc {
  *
  * <p>The function calculates and returns the minimum-area bounding rectangle
  * (possibly rotated) for a specified point set. See the OpenCV sample
- * <code>minarea.cpp</code>.</p>
+ * <code>minarea.cpp</code>.
+ * Developer should keep in mind that the returned rotatedRect can contain
+ * negative indices when data is close the the containing Mat element boundary.</p>
  *
  * @param points Input vector of 2D points, stored in:
  * <ul>
@@ -7410,8 +7797,8 @@ public class Imgproc {
  * 1's. The parameter is used for images only.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html#moments">org.opencv.imgproc.Imgproc.moments</a>
- * @see org.opencv.imgproc.Imgproc#contourArea
- * @see org.opencv.imgproc.Imgproc#arcLength
+ * @see Imgproc#contourArea
+ * @see Imgproc#arcLength
  */
     public static Moments moments(Mat array, boolean binaryImage)
     {
@@ -7497,8 +7884,8 @@ public class Imgproc {
  * or <code>Point2f</code>).
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html#moments">org.opencv.imgproc.Imgproc.moments</a>
- * @see org.opencv.imgproc.Imgproc#contourArea
- * @see org.opencv.imgproc.Imgproc#arcLength
+ * @see Imgproc#contourArea
+ * @see Imgproc#arcLength
  */
     public static Moments moments(Mat array)
     {
@@ -7543,6 +7930,12 @@ public class Imgproc {
  * <p>Any of the operations can be done in-place. In case of multi-channel images,
  * each channel is processed independently.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the morphologyEx function for the morphological
+ * opening and closing operations can be found at opencv_source_code/samples/cpp/morphology2.cpp
+ * </ul>
+ *
  * @param src Source image. The number of channels can be arbitrary. The depth
  * should be one of <code>CV_8U</code>, <code>CV_16U</code>, <code>CV_16S</code>,
  * <code>CV_32F" or </code>CV_64F".
@@ -7564,8 +7957,8 @@ public class Imgproc {
  * value has a special meaning. See "createMorphologyFilter" for details.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#morphologyex">org.opencv.imgproc.Imgproc.morphologyEx</a>
- * @see org.opencv.imgproc.Imgproc#erode
- * @see org.opencv.imgproc.Imgproc#dilate
+ * @see Imgproc#erode
+ * @see Imgproc#dilate
  */
     public static void morphologyEx(Mat src, Mat dst, int op, Mat kernel, Point anchor, int iterations, int borderType, Scalar borderValue)
     {
@@ -7605,6 +7998,12 @@ public class Imgproc {
  * <p>Any of the operations can be done in-place. In case of multi-channel images,
  * each channel is processed independently.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the morphologyEx function for the morphological
+ * opening and closing operations can be found at opencv_source_code/samples/cpp/morphology2.cpp
+ * </ul>
+ *
  * @param src Source image. The number of channels can be arbitrary. The depth
  * should be one of <code>CV_8U</code>, <code>CV_16U</code>, <code>CV_16S</code>,
  * <code>CV_32F" or </code>CV_64F".
@@ -7622,8 +8021,8 @@ public class Imgproc {
  * @param iterations Number of times erosion and dilation are applied.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#morphologyex">org.opencv.imgproc.Imgproc.morphologyEx</a>
- * @see org.opencv.imgproc.Imgproc#erode
- * @see org.opencv.imgproc.Imgproc#dilate
+ * @see Imgproc#erode
+ * @see Imgproc#dilate
  */
     public static void morphologyEx(Mat src, Mat dst, int op, Mat kernel, Point anchor, int iterations)
     {
@@ -7663,6 +8062,12 @@ public class Imgproc {
  * <p>Any of the operations can be done in-place. In case of multi-channel images,
  * each channel is processed independently.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the morphologyEx function for the morphological
+ * opening and closing operations can be found at opencv_source_code/samples/cpp/morphology2.cpp
+ * </ul>
+ *
  * @param src Source image. The number of channels can be arbitrary. The depth
  * should be one of <code>CV_8U</code>, <code>CV_16U</code>, <code>CV_16S</code>,
  * <code>CV_32F" or </code>CV_64F".
@@ -7678,8 +8083,8 @@ public class Imgproc {
  * @param kernel a kernel
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#morphologyex">org.opencv.imgproc.Imgproc.morphologyEx</a>
- * @see org.opencv.imgproc.Imgproc#erode
- * @see org.opencv.imgproc.Imgproc#dilate
+ * @see Imgproc#erode
+ * @see Imgproc#dilate
  */
     public static void morphologyEx(Mat src, Mat dst, int op, Mat kernel)
     {
@@ -7751,7 +8156,7 @@ public class Imgproc {
  * effects (optional).
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/motion_analysis_and_object_tracking.html#phasecorrelate">org.opencv.imgproc.Imgproc.phaseCorrelate</a>
- * @see org.opencv.imgproc.Imgproc#createHanningWindow
+ * @see Imgproc#createHanningWindow
  * @see org.opencv.core.Core#dft
  * @see org.opencv.core.Core#mulSpectrums
  * @see org.opencv.core.Core#getOptimalDFTSize
@@ -7820,7 +8225,7 @@ public class Imgproc {
  * @param src2 Source floating point array (CV_32FC1 or CV_64FC1)
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/motion_analysis_and_object_tracking.html#phasecorrelate">org.opencv.imgproc.Imgproc.phaseCorrelate</a>
- * @see org.opencv.imgproc.Imgproc#createHanningWindow
+ * @see Imgproc#createHanningWindow
  * @see org.opencv.core.Core#dft
  * @see org.opencv.core.Core#mulSpectrums
  * @see org.opencv.core.Core#getOptimalDFTSize
@@ -8128,6 +8533,12 @@ public class Imgproc {
  * different from the ones obtained by running the meanshift procedure on the
  * whole original image (i.e. when <code>maxLevel==0</code>).</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using mean-shift image segmentation can be found at
+ * opencv_source_code/samples/cpp/meanshift_segmentation.cpp
+ * </ul>
+ *
  * @param src The source 8-bit, 3-channel image.
  * @param dst The destination image of the same format and the same size as the
  * source.
@@ -8184,6 +8595,12 @@ public class Imgproc {
  * different from the ones obtained by running the meanshift procedure on the
  * whole original image (i.e. when <code>maxLevel==0</code>).</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using mean-shift image segmentation can be found at
+ * opencv_source_code/samples/cpp/meanshift_segmentation.cpp
+ * </ul>
+ *
  * @param src The source 8-bit, 3-channel image.
  * @param dst The destination image of the same format and the same size as the
  * source.
@@ -8213,6 +8630,12 @@ public class Imgproc {
  * pyramid. First, it upsamples the source image by injecting even zero rows and
  * columns and then convolves the result with the same kernel as in "pyrDown"
  * multiplied by 4.</p>
+ *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> (Python) An example of Laplacian Pyramid construction and merging can
+ * be found at opencv_source_code/samples/python2/lappyr.py
+ * </ul>
  *
  * @param src input image.
  * @param dst output image. It has the specified size and the same type as
@@ -8244,6 +8667,12 @@ public class Imgproc {
  * columns and then convolves the result with the same kernel as in "pyrDown"
  * multiplied by 4.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> (Python) An example of Laplacian Pyramid construction and merging can
+ * be found at opencv_source_code/samples/python2/lappyr.py
+ * </ul>
+ *
  * @param src input image.
  * @param dst output image. It has the specified size and the same type as
  * <code>src</code>.
@@ -8272,6 +8701,12 @@ public class Imgproc {
  * pyramid. First, it upsamples the source image by injecting even zero rows and
  * columns and then convolves the result with the same kernel as in "pyrDown"
  * multiplied by 4.</p>
+ *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> (Python) An example of Laplacian Pyramid construction and merging can
+ * be found at opencv_source_code/samples/python2/lappyr.py
+ * </ul>
  *
  * @param src input image.
  * @param dst output image. It has the specified size and the same type as
@@ -8453,9 +8888,9 @@ public class Imgproc {
  * </ul>
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#resize">org.opencv.imgproc.Imgproc.resize</a>
- * @see org.opencv.imgproc.Imgproc#warpAffine
- * @see org.opencv.imgproc.Imgproc#remap
- * @see org.opencv.imgproc.Imgproc#warpPerspective
+ * @see Imgproc#warpAffine
+ * @see Imgproc#remap
+ * @see Imgproc#warpPerspective
  */
     public static void resize(Mat src, Mat dst, Size dsize, double fx, double fy, int interpolation)
     {
@@ -8506,9 +8941,9 @@ public class Imgproc {
  * non-zero.</p>
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#resize">org.opencv.imgproc.Imgproc.resize</a>
- * @see org.opencv.imgproc.Imgproc#warpAffine
- * @see org.opencv.imgproc.Imgproc#remap
- * @see org.opencv.imgproc.Imgproc#warpPerspective
+ * @see Imgproc#warpAffine
+ * @see Imgproc#remap
+ * @see Imgproc#warpPerspective
  */
     public static void resize(Mat src, Mat dst, Size dsize)
     {
@@ -8552,18 +8987,18 @@ public class Imgproc {
  * as the source.</p>
  * @param kernelX Coefficients for filtering each row.
  * @param kernelY Coefficients for filtering each column.
- * @param anchor Anchor position within the kernel. The default value <em>(-1,
- * 1)</em> means that the anchor is at the kernel center.
+ * @param anchor Anchor position within the kernel. The default value
+ * <em>(-1,-1)</em> means that the anchor is at the kernel center.
  * @param delta Value added to the filtered results before storing them.
  * @param borderType Pixel extrapolation method. See "borderInterpolate" for
  * details.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#sepfilter2d">org.opencv.imgproc.Imgproc.sepFilter2D</a>
- * @see org.opencv.imgproc.Imgproc#GaussianBlur
- * @see org.opencv.imgproc.Imgproc#Sobel
- * @see org.opencv.imgproc.Imgproc#boxFilter
- * @see org.opencv.imgproc.Imgproc#blur
- * @see org.opencv.imgproc.Imgproc#filter2D
+ * @see Imgproc#GaussianBlur
+ * @see Imgproc#Sobel
+ * @see Imgproc#boxFilter
+ * @see Imgproc#blur
+ * @see Imgproc#filter2D
  */
     public static void sepFilter2D(Mat src, Mat dst, int ddepth, Mat kernelX, Mat kernelY, Point anchor, double delta, int borderType)
     {
@@ -8602,16 +9037,16 @@ public class Imgproc {
  * as the source.</p>
  * @param kernelX Coefficients for filtering each row.
  * @param kernelY Coefficients for filtering each column.
- * @param anchor Anchor position within the kernel. The default value <em>(-1,
- * 1)</em> means that the anchor is at the kernel center.
+ * @param anchor Anchor position within the kernel. The default value
+ * <em>(-1,-1)</em> means that the anchor is at the kernel center.
  * @param delta Value added to the filtered results before storing them.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#sepfilter2d">org.opencv.imgproc.Imgproc.sepFilter2D</a>
- * @see org.opencv.imgproc.Imgproc#GaussianBlur
- * @see org.opencv.imgproc.Imgproc#Sobel
- * @see org.opencv.imgproc.Imgproc#boxFilter
- * @see org.opencv.imgproc.Imgproc#blur
- * @see org.opencv.imgproc.Imgproc#filter2D
+ * @see Imgproc#GaussianBlur
+ * @see Imgproc#Sobel
+ * @see Imgproc#boxFilter
+ * @see Imgproc#blur
+ * @see Imgproc#filter2D
  */
     public static void sepFilter2D(Mat src, Mat dst, int ddepth, Mat kernelX, Mat kernelY, Point anchor, double delta)
     {
@@ -8652,11 +9087,11 @@ public class Imgproc {
  * @param kernelY Coefficients for filtering each column.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/filtering.html#sepfilter2d">org.opencv.imgproc.Imgproc.sepFilter2D</a>
- * @see org.opencv.imgproc.Imgproc#GaussianBlur
- * @see org.opencv.imgproc.Imgproc#Sobel
- * @see org.opencv.imgproc.Imgproc#boxFilter
- * @see org.opencv.imgproc.Imgproc#blur
- * @see org.opencv.imgproc.Imgproc#filter2D
+ * @see Imgproc#GaussianBlur
+ * @see Imgproc#Sobel
+ * @see Imgproc#boxFilter
+ * @see Imgproc#blur
+ * @see Imgproc#filter2D
  */
     public static void sepFilter2D(Mat src, Mat dst, int ddepth, Mat kernelX, Mat kernelY)
     {
@@ -8725,9 +9160,9 @@ public class Imgproc {
  * @param type thresholding type (see the details below).
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/miscellaneous_transformations.html#threshold">org.opencv.imgproc.Imgproc.threshold</a>
- * @see org.opencv.imgproc.Imgproc#findContours
+ * @see Imgproc#findContours
  * @see org.opencv.core.Core#max
- * @see org.opencv.imgproc.Imgproc#adaptiveThreshold
+ * @see Imgproc#adaptiveThreshold
  * @see org.opencv.core.Core#compare
  * @see org.opencv.core.Core#min
  */
@@ -9027,10 +9462,10 @@ public class Imgproc {
  * 0.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#warpaffine">org.opencv.imgproc.Imgproc.warpAffine</a>
- * @see org.opencv.imgproc.Imgproc#remap
- * @see org.opencv.imgproc.Imgproc#warpPerspective
- * @see org.opencv.imgproc.Imgproc#getRectSubPix
- * @see org.opencv.imgproc.Imgproc#resize
+ * @see Imgproc#remap
+ * @see Imgproc#warpPerspective
+ * @see Imgproc#getRectSubPix
+ * @see Imgproc#resize
  * @see org.opencv.core.Core#transform
  */
     public static void warpAffine(Mat src, Mat dst, Mat M, Size dsize, int flags, int borderMode, Scalar borderValue)
@@ -9067,10 +9502,10 @@ public class Imgproc {
  * the inverse transformation (<em>dst->src</em>).
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#warpaffine">org.opencv.imgproc.Imgproc.warpAffine</a>
- * @see org.opencv.imgproc.Imgproc#remap
- * @see org.opencv.imgproc.Imgproc#warpPerspective
- * @see org.opencv.imgproc.Imgproc#getRectSubPix
- * @see org.opencv.imgproc.Imgproc#resize
+ * @see Imgproc#remap
+ * @see Imgproc#warpPerspective
+ * @see Imgproc#getRectSubPix
+ * @see Imgproc#resize
  * @see org.opencv.core.Core#transform
  */
     public static void warpAffine(Mat src, Mat dst, Mat M, Size dsize, int flags)
@@ -9104,10 +9539,10 @@ public class Imgproc {
  * @param dsize size of the output image.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#warpaffine">org.opencv.imgproc.Imgproc.warpAffine</a>
- * @see org.opencv.imgproc.Imgproc#remap
- * @see org.opencv.imgproc.Imgproc#warpPerspective
- * @see org.opencv.imgproc.Imgproc#getRectSubPix
- * @see org.opencv.imgproc.Imgproc#resize
+ * @see Imgproc#remap
+ * @see Imgproc#warpPerspective
+ * @see Imgproc#getRectSubPix
+ * @see Imgproc#resize
  * @see org.opencv.core.Core#transform
  */
     public static void warpAffine(Mat src, Mat dst, Mat M, Size dsize)
@@ -9151,11 +9586,11 @@ public class Imgproc {
  * equals 0.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#warpperspective">org.opencv.imgproc.Imgproc.warpPerspective</a>
- * @see org.opencv.imgproc.Imgproc#warpAffine
- * @see org.opencv.imgproc.Imgproc#remap
+ * @see Imgproc#warpAffine
+ * @see Imgproc#remap
  * @see org.opencv.core.Core#perspectiveTransform
- * @see org.opencv.imgproc.Imgproc#getRectSubPix
- * @see org.opencv.imgproc.Imgproc#resize
+ * @see Imgproc#getRectSubPix
+ * @see Imgproc#resize
  */
     public static void warpPerspective(Mat src, Mat dst, Mat M, Size dsize, int flags, int borderMode, Scalar borderValue)
     {
@@ -9189,11 +9624,11 @@ public class Imgproc {
  * that sets <code>M</code> as the inverse transformation (<em>dst->src</em>).
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#warpperspective">org.opencv.imgproc.Imgproc.warpPerspective</a>
- * @see org.opencv.imgproc.Imgproc#warpAffine
- * @see org.opencv.imgproc.Imgproc#remap
+ * @see Imgproc#warpAffine
+ * @see Imgproc#remap
  * @see org.opencv.core.Core#perspectiveTransform
- * @see org.opencv.imgproc.Imgproc#getRectSubPix
- * @see org.opencv.imgproc.Imgproc#resize
+ * @see Imgproc#getRectSubPix
+ * @see Imgproc#resize
  */
     public static void warpPerspective(Mat src, Mat dst, Mat M, Size dsize, int flags)
     {
@@ -9224,11 +9659,11 @@ public class Imgproc {
  * @param dsize size of the output image.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#warpperspective">org.opencv.imgproc.Imgproc.warpPerspective</a>
- * @see org.opencv.imgproc.Imgproc#warpAffine
- * @see org.opencv.imgproc.Imgproc#remap
+ * @see Imgproc#warpAffine
+ * @see Imgproc#remap
  * @see org.opencv.core.Core#perspectiveTransform
- * @see org.opencv.imgproc.Imgproc#getRectSubPix
- * @see org.opencv.imgproc.Imgproc#resize
+ * @see Imgproc#getRectSubPix
+ * @see Imgproc#resize
  */
     public static void warpPerspective(Mat src, Mat dst, Mat M, Size dsize)
     {
@@ -9268,12 +9703,20 @@ public class Imgproc {
  * a watershed boundary (-1's pixels); for example, they can touch each other in
  * the initial marker image passed to the function.</p>
  *
+ * <p>Note:</p>
+ * <ul>
+ *   <li> An example using the watershed algorithm can be found at
+ * opencv_source_code/samples/cpp/watershed.cpp
+ *   <li> (Python) An example using the watershed algorithm can be found at
+ * opencv_source_code/samples/python2/watershed.py
+ * </ul>
+ *
  * @param image Input 8-bit 3-channel image.
  * @param markers Input/output 32-bit single-channel image (map) of markers. It
  * should have the same size as <code>image</code>.
  *
  * @see <a href="http://docs.opencv.org/modules/imgproc/doc/miscellaneous_transformations.html#watershed">org.opencv.imgproc.Imgproc.watershed</a>
- * @see org.opencv.imgproc.Imgproc#findContours
+ * @see Imgproc#findContours
  */
     public static void watershed(Mat image, Mat markers)
     {
@@ -9343,6 +9786,11 @@ public class Imgproc {
     // C++:  void accumulateWeighted(Mat src, Mat& dst, double alpha, Mat mask = Mat())
     private static native void accumulateWeighted_0(long src_nativeObj, long dst_nativeObj, double alpha, long mask_nativeObj);
     private static native void accumulateWeighted_1(long src_nativeObj, long dst_nativeObj, double alpha);
+
+    // C++:  void adaptiveBilateralFilter(Mat src, Mat& dst, Size ksize, double sigmaSpace, double maxSigmaColor = 20.0, Point anchor = Point(-1, -1), int borderType = BORDER_DEFAULT)
+    private static native void adaptiveBilateralFilter_0(long src_nativeObj, long dst_nativeObj, double ksize_width, double ksize_height, double sigmaSpace, double maxSigmaColor, double anchor_x, double anchor_y, int borderType);
+    private static native void adaptiveBilateralFilter_1(long src_nativeObj, long dst_nativeObj, double ksize_width, double ksize_height, double sigmaSpace, double maxSigmaColor, double anchor_x, double anchor_y);
+    private static native void adaptiveBilateralFilter_2(long src_nativeObj, long dst_nativeObj, double ksize_width, double ksize_height, double sigmaSpace);
 
     // C++:  void adaptiveThreshold(Mat src, Mat& dst, double maxValue, int adaptiveMethod, int thresholdType, int blockSize, double C)
     private static native void adaptiveThreshold_0(long src_nativeObj, long dst_nativeObj, double maxValue, int adaptiveMethod, int thresholdType, int blockSize, double C);

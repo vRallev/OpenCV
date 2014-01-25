@@ -3,9 +3,48 @@ package org.opencv.core;
 /**
  * <p>Template class for a 4-element vector derived from Vec.</p>
  *
- * <p>template<typename _Tp> class Scalar_ : public Vec<_Tp, 4> {... }; <code></p>
+ * <p>template<typename _Tp> class CV_EXPORTS Scalar_ : public Vec<_Tp, 4> <code></p>
  *
  * <p>// C++ code:</p>
+ *
+ *
+ * <p>public:</p>
+ *
+ * <p>//! various constructors</p>
+ *
+ * <p>Scalar_();</p>
+ *
+ * <p>Scalar_(_Tp v0, _Tp v1, _Tp v2=0, _Tp v3=0);</p>
+ *
+ * <p>Scalar_(const CvScalar& s);</p>
+ *
+ * <p>Scalar_(_Tp v0);</p>
+ *
+ * <p>//! returns a scalar with all elements set to v0</p>
+ *
+ * <p>static Scalar_<_Tp> all(_Tp v0);</p>
+ *
+ * <p>//! conversion to the old-style CvScalar</p>
+ *
+ * <p>operator CvScalar() const;</p>
+ *
+ * <p>//! conversion to another data type</p>
+ *
+ * <p>template<typename T2> operator Scalar_<T2>() const;</p>
+ *
+ * <p>//! per-element product</p>
+ *
+ * <p>Scalar_<_Tp> mul(const Scalar_<_Tp>& t, double scale=1) const;</p>
+ *
+ * <p>// returns (v0, -v1, -v2, -v3)</p>
+ *
+ * <p>Scalar_<_Tp> conj() const;</p>
+ *
+ * <p>// returns true iff v1 == v2 == v3 == 0</p>
+ *
+ * <p>bool isReal() const;</p>
+ *
+ * <p>};</p>
  *
  * <p>typedef Scalar_<double> Scalar;</p>
  *
