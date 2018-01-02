@@ -1,7 +1,11 @@
-OpenCV Java project for Android
-===============================
+# Deprecated
+### This project is not maintained anymore.
 
-The OpenCV library for Android as Gradle project.
+
+~~OpenCV Java project for Android~~
+===================================
+
+~~The OpenCV library for Android as Gradle project.~~
 
 All credit goes to http://opencv.org/ I've took their library and exported it as `.aar` library. Now you can easily use OpenCV in a Gradle / Android Studio project.
 
